@@ -1,0 +1,17 @@
+
+.c-shield{
+    padding: 60px 0px;
+    background-color: #000;
+
+    .shield-text{
+        color: #fff;
+        font-size: 16px;
+        &-title{
+            text-transform: uppercase;
+            margin-bottom: 0;
+            padding-bottom: 8px;
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
