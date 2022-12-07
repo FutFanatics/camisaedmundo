@@ -1573,6 +1573,17 @@ p {
 .c-parallax {
   background-image: url("../img/bannerMeio.png");
   min-height: 60vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.c-parallax .parallax-title {
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-left: 64px;
 }
 
 /** PAGE PALMEIRAS **/
