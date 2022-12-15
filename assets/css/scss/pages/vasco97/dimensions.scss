@@ -1,0 +1,71 @@
+.c-dimensions{
+    padding: 80px 0px;
+    background-color: #000;
+
+    .dimension{
+        &-title{
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 25px;
+            margin-bottom: 32px;
+        }
+        &-targets{
+            margin-bottom: 16px;
+
+            .target{
+                background-color: #D9D9D9;
+                width: 130px;
+                display: flex;
+                justify-content: center;
+                height: 30px;
+                margin-right: 16px;
+                align-items: center;
+                position: relative;
+
+                &::before{
+                    background-color: #000;
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 18px;
+                    top: -12px;
+                    left: -10px;
+                    transform: rotate(48deg);
+                    
+                }
+                &::after{
+                    background-color: #000;
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 18px;
+                    bottom: -12px;
+                    right: -10px;
+                    transform: rotate(48deg);
+                    
+                }
+
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+
+            
+        }
+
+        &-text{
+            font-size: 18px;
+            color: #FFF;
+            margin-top: 32px;
+        }
+
+        &-box-img{
+            margin-bottom: 24px;
+            .text_img{
+                margin-top: 16px;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+}

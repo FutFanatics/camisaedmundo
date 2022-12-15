@@ -1,3 +1,7 @@
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+
 .c-parallax{
     background-image: url("../img/bannerMeio.png");
     min-height: 60vh;
@@ -5,12 +9,29 @@
     display: flex;
     align-items: center;
 
+    .parallax-shield{
+        width: 80px;
+        height: auto;
+
+        @include md{
+            width: auto;
+        }
+    }
+
     .parallax-title{
         color: #fff;
         margin-bottom: 0;
         font-weight: 800;
-        font-size: 40px;
+        font-size: 28px;
         text-transform: uppercase;
-        padding-left:64px;
+        text-align: center;
+        margin-top: 16px;
+
+        @include md{
+            padding-left: 64px;
+            font-size: 40px;
+            text-align: start;
+            margin-top: 0px;
+        }
     }
 }

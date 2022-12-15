@@ -1576,13 +1576,120 @@ p {
   display: flex;
   align-items: center;
 }
+.c-parallax .parallax-shield {
+  width: 80px;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .c-parallax .parallax-shield {
+    width: auto;
+  }
+}
 .c-parallax .parallax-title {
   color: #fff;
   margin-bottom: 0;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 28px;
   text-transform: uppercase;
-  padding-left: 64px;
+  text-align: center;
+  margin-top: 16px;
+}
+@media (min-width: 1200px) {
+  .c-parallax .parallax-title {
+    padding-left: 64px;
+    font-size: 40px;
+    text-align: start;
+    margin-top: 0px;
+  }
+}
+
+.c-dimensions {
+  padding: 80px 0px;
+  background-color: #000;
+}
+.c-dimensions .dimension-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 32px;
+}
+.c-dimensions .dimension-targets {
+  margin-bottom: 16px;
+}
+.c-dimensions .dimension-targets .target {
+  background-color: #D9D9D9;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  margin-right: 16px;
+  align-items: center;
+  position: relative;
+}
+.c-dimensions .dimension-targets .target::before {
+  background-color: #000;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 18px;
+  top: -12px;
+  left: -10px;
+  transform: rotate(48deg);
+}
+.c-dimensions .dimension-targets .target::after {
+  background-color: #000;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 18px;
+  bottom: -12px;
+  right: -10px;
+  transform: rotate(48deg);
+}
+.c-dimensions .dimension-targets .target:last-child {
+  margin-right: 0px;
+}
+.c-dimensions .dimension-text {
+  font-size: 18px;
+  color: #FFF;
+  margin-top: 32px;
+}
+.c-dimensions .dimension-box-img {
+  margin-bottom: 24px;
+}
+.c-dimensions .dimension-box-img .text_img {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #fff;
+}
+
+footer .c-up-footer {
+  background-color: #383838;
+  padding: 20px 0px;
+}
+footer .c-up-footer .footer-box {
+  position: relative;
+}
+footer .c-up-footer .footer-box::before {
+  height: 50px;
+  width: 1px;
+  transform: translateY(50%);
+  bottom: 50%;
+  position: absolute;
+  content: "";
+  right: 0px;
+  background-color: #000;
+}
+footer .c-up-footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+}
+footer .c-up-footer .footer-content .text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /** PAGE PALMEIRAS **/
