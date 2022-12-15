@@ -1494,6 +1494,55 @@ html .botao-lancamento:hover {
   font-weight: bold;
   src: url("fonts/sporty/SportyPro-Bold.otf") format("opentype");
 }
+.c-describe {
+  background-color: #000;
+}
+.c-describe .describe__slick .item {
+  padding-right: 32px;
+}
+.c-describe .describe__slick .describe-col {
+  background-color: rgba(163, 163, 163, 0.2);
+  border: 1px solid #6D6D6D;
+  padding: 40px;
+  position: relative;
+  min-height: 320px;
+}
+.c-describe .describe__slick .describe-col::before {
+  content: "";
+  background-color: #000;
+  left: -3px;
+  top: -16px;
+  height: 46px;
+  position: absolute;
+  border-right: 1px solid #6D6D6D;
+  width: 22px;
+  transform: rotate(45deg);
+}
+.c-describe .describe__slick .describe-col::after {
+  content: "";
+  background-color: #000;
+  right: -5px;
+  bottom: -16px;
+  height: 46px;
+  position: absolute;
+  border-left: 1px solid #6D6D6D;
+  width: 25px;
+  transform: rotate(45deg);
+}
+.c-describe .describe__slick .describe-col .title-describe {
+  color: #FFF;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+.c-describe .describe__slick .describe-col .content-describe {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 p {
   margin-bottom: 0;
 }
