@@ -6,6 +6,7 @@ footer{
         .footer{
             &-box{
                 position: relative;
+                justify-content: center;
 
                 &::before{
                     height: 50px;
@@ -17,6 +18,10 @@ footer{
                     right: 0px;
                     background-color: #000;
                 }
+            }
+            &-icon{
+                width: 60px;
+                height: auto;
             }
             &-content{
                 display: flex;

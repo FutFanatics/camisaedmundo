@@ -1669,6 +1669,7 @@ footer .c-up-footer {
 }
 footer .c-up-footer .footer-box {
   position: relative;
+  justify-content: center;
 }
 footer .c-up-footer .footer-box::before {
   height: 50px;
@@ -1679,6 +1680,10 @@ footer .c-up-footer .footer-box::before {
   content: "";
   right: 0px;
   background-color: #000;
+}
+footer .c-up-footer .footer-icon {
+  width: 60px;
+  height: auto;
 }
 footer .c-up-footer .footer-content {
   display: flex;
