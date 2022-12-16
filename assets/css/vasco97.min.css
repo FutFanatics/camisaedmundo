@@ -1452,6 +1452,11 @@ html .botao-lancamento:hover {
 }
 
 @font-face {
+  font-family: "versus-medium";
+  src: url("fonts/versus/versusmedium.otf?v2"); /* IE9 Compat Modes */
+  font-style: normal;
+}
+@font-face {
   font-family: "Versus";
   src: url("fonts/versus/versusregular.otf?v2"); /* IE9 Compat Modes */
   font-style: normal;
@@ -1538,7 +1543,7 @@ html .botao-lancamento:hover {
   color: #FFF;
   font-family: "versus";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding-bottom: 6px;
@@ -1645,14 +1650,15 @@ p {
   margin-bottom: 0;
   font-weight: 800;
   font-size: 28px;
-  text-transform: uppercase;
   text-align: center;
   margin-top: 16px;
+  font-family: "versus-medium";
 }
 @media (min-width: 1200px) {
   .c-parallax .parallax-title {
     padding-left: 64px;
-    font-size: 40px;
+    font-size: 60px;
+    letter-spacing: 2px;
     text-align: start;
     margin-top: 0px;
   }
@@ -1665,8 +1671,10 @@ p {
 .c-dimensions .dimension-title {
   text-transform: uppercase;
   color: #fff;
-  font-size: 25px;
-  margin-bottom: 32px;
+  font-size: 30px;
+  font-family: "versus";
+  margin-bottom: 24px;
+  letter-spacing: 5px;
 }
 .c-dimensions .dimension-targets {
   margin-bottom: 16px;
