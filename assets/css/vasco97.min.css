@@ -1504,6 +1504,26 @@ html .botao-lancamento:hover {
   font-weight: bold;
   src: url("fonts/sporty/SportyPro-Bold.otf") format("opentype");
 }
+.c-home {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.c-home .box-title .top-title-home {
+  color: #fff;
+  font-family: "versus";
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+.c-home .box-title .title-home {
+  font-family: "versus";
+  font-size: 60px;
+  letter-spacing: 3px;
+  color: #FFF;
+}
+
 .c-describe {
   background-color: #000;
 }

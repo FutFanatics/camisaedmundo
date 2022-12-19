@@ -1,0 +1,22 @@
+.c-home{
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .box-title{
+        .top-title-home{
+            color: #fff;
+            font-family: 'versus';
+            font-size: 25px;
+            letter-spacing: 5px;
+            margin-bottom: 0;
+        }
+        .title-home{
+            font-family: 'versus';
+            font-size: 60px;
+            letter-spacing: 3px;
+            color: #FFF;
+        }
+    }
+}
