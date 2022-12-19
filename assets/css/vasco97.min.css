@@ -1504,11 +1504,35 @@ html .botao-lancamento:hover {
   font-weight: bold;
   src: url("fonts/sporty/SportyPro-Bold.otf") format("opentype");
 }
+.c-top {
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/tira-topo.png");
+  min-height: 10vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-top .title-top span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 5px;
+}
+.c-top .title-top .shield {
+  width: 30px;
+  margin: 0 20px;
+}
+
 .c-home {
   background-color: #000;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
+  padding: 0px 0px 60px 0px;
   align-items: center;
+}
+.c-home .box-title {
+  margin-bottom: 48px;
 }
 .c-home .box-title .top-title-home {
   color: #fff;
@@ -1522,6 +1546,64 @@ html .botao-lancamento:hover {
   font-size: 60px;
   letter-spacing: 3px;
   color: #FFF;
+}
+.c-home .box-price .price {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+.c-home .box-price .price-new {
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 16px;
+}
+.c-home .box-price .target-price {
+  padding: 8px 40px 8px 30px;
+  color: #FFF;
+  background-color: #222222;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+}
+.c-home .box-price .target-price::before {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  content: "";
+  bottom: 1px;
+  transform: rotate(125deg);
+  right: -24px;
+  background-color: #000;
+}
+.c-home .box-buy {
+  margin-top: 64px;
+  max-width: 60%;
+  padding: 0;
+}
+.c-home .box-buy .amount {
+  padding: 10px 20px;
+  border: 1px solid #363636;
+  display: flex;
+  justify-content: space-between;
+}
+.c-home .box-buy .amount span {
+  color: #fff;
+  font-family: "versus-medium";
+  letter-spacing: 2px;
+}
+.c-home .box-buy .buy {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  font-family: "versus-medium";
+  font-size: 22px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.c-home .slick__shirt .shirt {
+  max-height: 512px;
 }
 
 .c-describe {

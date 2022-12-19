@@ -1,10 +1,35 @@
+.c-top{
+    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/tira-topo.png');
+    min-height: 10vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-top{
+        span{
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #FFF;
+            letter-spacing: 5px;
+        }
+        .shield{
+            width: 30px;
+            margin:0 20px;
+        }
+    }
+}
+
 .c-home{
     background-color: #000;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
+    padding: 0px 0px 60px 0px;
     align-items: center;
 
     .box-title{
+        margin-bottom: 48px;
         .top-title-home{
             color: #fff;
             font-family: "versus-medium";
@@ -17,6 +42,72 @@
             font-size: 60px;
             letter-spacing: 3px;
             color: #FFF;
+        }
+    }
+    .box-price{
+        .price{
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 400;
+
+            &-new{
+                font-weight: 700;
+                font-size: 30px;
+                padding-bottom: 16px;
+            }
+        }
+        .target-price{
+            padding: 8px 40px 8px 30px;
+            color: #FFF;
+            background-color:#222222;
+            font-size: 14px;
+            text-transform: uppercase;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                width: 50px;
+                height: 25px;
+                content: "";
+                bottom: 1px;
+                transform: rotate(125deg);
+                right: -24px;
+                background-color: #000;
+            }
+        }
+    }
+    .box-buy{
+        margin-top: 64px;
+        max-width: 60%;
+        padding: 0;
+        .amount{
+            padding: 10px 20px;
+            border: 1px solid #363636;
+            display: flex;
+            justify-content: space-between;
+
+            span{
+                color: #fff;
+                font-family: 'versus-medium';
+                letter-spacing: 2px;
+            }
+            
+        }
+        .buy{
+            background-color:#fff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0px;
+            font-family: 'versus-medium';
+            font-size: 22px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .slick__shirt{
+        .shirt{
+            max-height: 512px;
         }
     }
 }
