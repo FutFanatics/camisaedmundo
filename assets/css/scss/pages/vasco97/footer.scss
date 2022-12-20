@@ -36,4 +36,38 @@ footer{
             }
         }
     }
+    .c-bottom-footer{
+        background-color: #000;
+        padding: 30px 0px 50px 0px;
+        .pagament{
+            padding: 20px 0px;
+            .card{
+                margin-right: 16px;
+
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+        .sign{
+            margin-top: 8px;
+            .sign-powered{
+                font-size: 18px;
+                color: #fff;
+                font-weight: 400;
+                margin-right: 16px;
+                margin-bottom: 0;
+            }
+        }
+        
+        .marca{
+            height: 40px;
+            object-fit: contain;
+            margin-right: 64px;
+
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
 }

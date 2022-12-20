@@ -1861,6 +1861,37 @@ footer .c-up-footer .footer-content .text {
   font-size: 16px;
   font-weight: 700;
 }
+footer .c-bottom-footer {
+  background-color: #000;
+  padding: 30px 0px 50px 0px;
+}
+footer .c-bottom-footer .pagament {
+  padding: 20px 0px;
+}
+footer .c-bottom-footer .pagament .card {
+  margin-right: 16px;
+}
+footer .c-bottom-footer .pagament .card:last-child {
+  margin-right: 0px;
+}
+footer .c-bottom-footer .sign {
+  margin-top: 8px;
+}
+footer .c-bottom-footer .sign .sign-powered {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+footer .c-bottom-footer .marca {
+  height: 40px;
+  object-fit: contain;
+  margin-right: 64px;
+}
+footer .c-bottom-footer .marca:last-child {
+  margin-right: 0px;
+}
 
 /** PAGE PALMEIRAS **/
 
