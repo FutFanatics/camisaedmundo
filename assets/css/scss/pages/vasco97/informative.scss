@@ -84,6 +84,11 @@ p{
         display: flex;
         align-items: center;
         margin-top: 32px;
+        justify-content: center;
+
+        @include md{
+            justify-content: start;
+        }
 
         .target{
             background-color: #646464;

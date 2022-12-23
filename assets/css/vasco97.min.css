@@ -1742,6 +1742,12 @@ p {
   display: flex;
   align-items: center;
   margin-top: 32px;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .c-informative .box-target {
+    justify-content: start;
+  }
 }
 .c-informative .box-target .target {
   background-color: #646464;
