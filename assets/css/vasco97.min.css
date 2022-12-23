@@ -1663,6 +1663,17 @@ p {
 .c-informative {
   background-color: #000;
   padding: 60px 0px;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/background_teste.png");
+  background-size: cover;
+  background-position: center;
+}
+.c-informative .container {
+  padding: 0px 24px;
+}
+@media (min-width: 1200px) {
+  .c-informative .container {
+    padding: 0px;
+  }
 }
 .c-informative .text {
   color: #FFF;
@@ -1670,25 +1681,57 @@ p {
 .c-informative .text-toptitle {
   text-transform: uppercase;
   font-size: 25px;
-  line-height: 1rem;
+  font-family: "versus";
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-informative .text-toptitle {
+    font-size: 25px;
+    text-align: start;
+    line-height: 1rem;
+  }
 }
 .c-informative .text-title {
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 55px;
   font-weight: 800;
-  line-height: 5rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-informative .text-title {
+    text-align: start;
+    font-size: 100px;
+    line-height: 5rem;
+  }
 }
 .c-informative .text-subtitle {
   color: #C3281E;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: justify;
+  text-align: center;
+  padding-top: 8px;
+}
+@media (min-width: 1200px) {
+  .c-informative .text-subtitle {
+    padding-top: 0px;
+    text-align: justify;
+  }
 }
 .c-informative .text-content {
   margin-bottom: 0px;
-  padding-top: 16px;
+  padding-top: 8px;
   padding-bottom: 32px;
+  text-align: justify;
+}
+@media (min-width: 1200px) {
+  .c-informative .text-content {
+    text-align: start;
+    padding-top: 16px;
+  }
 }
 .c-informative .text-content-title {
   color: #C3281E;
@@ -1712,7 +1755,12 @@ p {
   margin-right: 0px;
 }
 .c-informative .img-informative {
-  min-height: 500px;
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  .c-informative .img-informative {
+    min-height: 500px;
+  }
 }
 
 .c-shield {
@@ -1769,6 +1817,16 @@ p {
 .c-dimensions {
   padding: 80px 0px;
   background-color: #000;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/fundo-dimensions.png");
+  background-size: cover;
+}
+.c-dimensions .container {
+  padding: 0px 24px;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .container {
+    padding: 0px;
+  }
 }
 .c-dimensions .dimension-title {
   text-transform: uppercase;
@@ -1820,12 +1878,32 @@ p {
   margin-top: 32px;
 }
 .c-dimensions .dimension-box-img {
-  margin-bottom: 24px;
+  margin-top: 8px;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .dimension-box-img {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
 }
 .c-dimensions .dimension-box-img .text_img {
   margin-top: 16px;
   font-size: 16px;
   color: #fff;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .dimension-box-img .text_img {
+    text-align: start;
+  }
+}
+.c-dimensions .container-img {
+  padding-top: 32px;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .container-img {
+    padding-top: 0px;
+  }
 }
 
 footer .c-up-footer {

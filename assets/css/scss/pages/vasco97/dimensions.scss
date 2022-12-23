@@ -1,7 +1,21 @@
-.c-dimensions{
+
+    @mixin md {
+        @media (min-width: 1200px) { @content; }
+    }
+    .c-dimensions{
     padding: 80px 0px;
     background-color: #000;
+    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/fundo-dimensions.png');
+    background-size: cover;
 
+        
+    .container{
+        padding: 0px 24px;
+
+        @include md{
+            padding:0px;
+        }
+    }
     .dimension{
         &-title{
             text-transform: uppercase;
@@ -61,13 +75,29 @@
             margin-top: 32px;
         }
 
+        
         &-box-img{
-            margin-bottom: 24px;
+            margin-top: 8px;
+            @include md{
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
             .text_img{
                 margin-top: 16px;
                 font-size: 16px;
                 color: #fff;
+                text-align: center,;
+                @include md{
+                    text-align: start;
+                }
             }
+        }
+    }
+    .container-img{
+        padding-top: 32px;
+
+        @include md{
+            padding-top: 0px ;
         }
     }
 }
