@@ -1965,7 +1965,12 @@ footer .c-bottom-footer .sign .sign-powered {
 footer .c-bottom-footer .marca {
   height: 40px;
   object-fit: contain;
-  margin-right: 64px;
+  margin-right: 16px;
+}
+@media (min-width: 1200px) {
+  footer .c-bottom-footer .marca {
+    margin-right: 64px;
+  }
 }
 footer .c-bottom-footer .marca:last-child {
   margin-right: 0px;

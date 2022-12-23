@@ -1,3 +1,6 @@
+@mixin md {
+    @media (min-width: 1200px) { @content; }
+}
 footer{
     .c-up-footer{
         background-color: #383838;
@@ -63,7 +66,12 @@ footer{
         .marca{
             height: 40px;
             object-fit: contain;
-            margin-right: 64px;
+            margin-right: 16px;
+            
+
+            @include md{
+                margin-right: 64px;
+            }
 
             &:last-child{
                 margin-right: 0px;
