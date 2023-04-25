@@ -1,17 +1,26 @@
 
 .c-shield{
-    padding: 60px 0px;
+    padding: 80px 0px;
     background-color: #000;
 
-    .shield-text{
-        color: #fff;
-        font-size: 16px;
+    .row-top{
+        padding-bottom: 64px;
+    }
+    .shield{
         &-title{
+            font-family:'versus';
             text-transform: uppercase;
-            margin-bottom: 0;
-            padding-bottom: 8px;
-            font-size: 35px;
-            font-weight: 700;
+            color: #fff;
+            font-size: 70px;
+            letter-spacing:3px;
+            line-height: 4rem;
+            font-weight: 300;
+        }
+        &-content{
+            color: #fff;
+            font-size: 16px;
+            font-weight: 300;
+            padding-top: 8px;
         }
     }
 }

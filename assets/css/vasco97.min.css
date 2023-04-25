@@ -1688,29 +1688,33 @@ p {
 }
 @media (min-width: 1200px) {
   .c-informative .text-toptitle {
-    font-size: 25px;
+    font-size: 32px;
     text-align: start;
     line-height: 1rem;
+    font-weight: 300;
+    padding-bottom: 12px;
+    letter-spacing: 5px;
   }
 }
 .c-informative .text-title {
   text-transform: uppercase;
   font-size: 55px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.5rem;
+  font-family: "versus";
   text-align: center;
 }
 @media (min-width: 1200px) {
   .c-informative .text-title {
     text-align: start;
-    font-size: 100px;
-    line-height: 5rem;
+    font-size: 140px;
+    line-height: 6rem;
   }
 }
 .c-informative .text-subtitle {
-  color: #C3281E;
+  color: #FFA400;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   padding-top: 8px;
@@ -1731,12 +1735,16 @@ p {
   .c-informative .text-content {
     text-align: start;
     padding-top: 16px;
+    font-weight: 300;
   }
 }
 .c-informative .text-content-title {
-  color: #C3281E;
+  color: #FFA400;
   font-weight: 700;
   padding-bottom: 8px;
+}
+.c-informative .text-content strong {
+  font-weight: 700;
 }
 .c-informative .box-target {
   display: flex;
@@ -1770,19 +1778,26 @@ p {
 }
 
 .c-shield {
-  padding: 60px 0px;
+  padding: 80px 0px;
   background-color: #000;
 }
-.c-shield .shield-text {
+.c-shield .row-top {
+  padding-bottom: 64px;
+}
+.c-shield .shield-title {
+  font-family: "versus";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 70px;
+  letter-spacing: 3px;
+  line-height: 4rem;
+  font-weight: 300;
+}
+.c-shield .shield-content {
   color: #fff;
   font-size: 16px;
-}
-.c-shield .shield-text-title {
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-bottom: 8px;
-  font-size: 35px;
-  font-weight: 700;
+  font-weight: 300;
+  padding-top: 8px;
 }
 
 .c-parallax {
@@ -1912,15 +1927,15 @@ p {
   }
 }
 
-footer .c-up-footer {
+.c-up-footer {
   background-color: #383838;
   padding: 20px 0px;
 }
-footer .c-up-footer .footer-box {
+.c-up-footer .footer-box {
   position: relative;
   justify-content: center;
 }
-footer .c-up-footer .footer-box::before {
+.c-up-footer .footer-box::before {
   height: 50px;
   width: 1px;
   transform: translateY(50%);
@@ -1930,55 +1945,56 @@ footer .c-up-footer .footer-box::before {
   right: 0px;
   background-color: rgba(0, 0, 0, 0.5);
 }
-footer .c-up-footer .footer-icon {
+.c-up-footer .footer-icon {
   width: 60px;
   height: auto;
 }
-footer .c-up-footer .footer-content {
+.c-up-footer .footer-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 16px;
 }
-footer .c-up-footer .footer-content .text {
+.c-up-footer .footer-content .text {
   color: #fff;
   font-size: 16px;
   font-weight: 700;
 }
-footer .c-bottom-footer {
+
+.c-bottom-footer {
   background-color: #000;
   padding: 30px 0px 50px 0px;
 }
-footer .c-bottom-footer .pagament {
+.c-bottom-footer .pagament {
   padding: 20px 0px;
 }
-footer .c-bottom-footer .pagament .card {
+.c-bottom-footer .pagament .card {
   margin-right: 16px;
 }
-footer .c-bottom-footer .pagament .card:last-child {
+.c-bottom-footer .pagament .card:last-child {
   margin-right: 0px;
 }
-footer .c-bottom-footer .sign {
+.c-bottom-footer .sign {
   margin-top: 8px;
 }
-footer .c-bottom-footer .sign .sign-powered {
+.c-bottom-footer .sign .sign-powered {
   font-size: 18px;
   color: #fff;
   font-weight: 400;
   margin-right: 16px;
   margin-bottom: 0;
 }
-footer .c-bottom-footer .marca {
+.c-bottom-footer .marca {
   height: 40px;
   object-fit: contain;
   margin-right: 16px;
 }
 @media (min-width: 1200px) {
-  footer .c-bottom-footer .marca {
+  .c-bottom-footer .marca {
     margin-right: 64px;
   }
 }
-footer .c-bottom-footer .marca:last-child {
+.c-bottom-footer .marca:last-child {
   margin-right: 0px;
 }
 
