@@ -1,0 +1,71 @@
+.c-form{
+    background-color: #000;
+    padding: 60px 0px;
+    .container{
+        .col{
+            &-register{
+                background-color: #101010;
+                height: 130px;
+                display: flex;
+                align-items: center;
+
+                p{
+                    color: #FFFFFF;
+                    font-weight: 300;
+                    padding: 90px;
+                    font-size: 16px;
+                }
+
+            }
+            &-shield{
+                left: 33%;
+                z-index: 99;
+                .time-title{
+                    .icon-vasco{
+                        height: 90px;
+                    }
+                }
+            }
+            &-send{
+                background-color:#3F3F3F; 
+                height: 130px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .input-name , .input-email{
+                    border: 2px solid #FFFFFF;
+                    color: #FFFFFF;
+                    background-color: #3F3F3F;
+
+                    &::placeholder{
+                        color: #FFFFFF;
+                    }
+                }
+                .aceite-label{
+                    font-size: 14px;
+                    color: #AFAFAF;
+
+                    a{
+                        color: #C9C9C9;
+                        text-decoration: underline;
+                    }
+                }
+
+                .btn-news{
+                    background-color: #FFF;
+                    border: none;
+                    padding: 8px;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    margin-top: 8px;
+                    margin-right: 8px;
+                }
+                .icon-arrow-right{
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+}

@@ -4,6 +4,10 @@
 $vitrine-blue: #192C53;
 $vitrine-gray: #747474;
 
+*{
+    font-family: 'gotham';
+}
+
 @import "../_lib/progressive.css";
 
 @import "../components/reset-tray";
@@ -20,6 +24,7 @@ $vitrine-gray: #747474;
 @import "../components/variables";
 @import "vasco97/describe";
 @import "vasco97/informative";
+@import "vasco97/forms";
 @import "vasco97/shield";
 @import "vasco97/parallax";
 @import "vasco97/dimensions";
