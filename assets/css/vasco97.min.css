@@ -1840,6 +1840,136 @@ p {
   font-weight: 700;
 }
 
+.modal-buy {
+  background-color: #212121;
+}
+.modal-buy .modal-dialog {
+  max-width: 900px;
+}
+.modal-buy .modal-dialog .modal-content {
+  background-color: #212121;
+}
+.modal-buy .modal-dialog .modal-content .modal-body {
+  padding: 0px;
+}
+.modal-buy .col-img {
+  padding: 0px;
+}
+.modal-buy .col-img .buy-img {
+  width: 100%;
+}
+.modal-buy .col-validation {
+  padding: 60px 40px;
+}
+.modal-buy .col-validation .close {
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  padding: 3px 5px;
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  border: none;
+}
+.modal-buy .col-validation .close:hover {
+  opacity: 1;
+}
+.modal-buy .col-validation .modal_buy-title {
+  font-size: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+.modal-buy .col-validation .modal_buy-rules {
+  border: solid 1px #656565;
+  padding: 30px;
+  background-color: #151515;
+  margin-bottom: 16px;
+}
+.modal-buy .col-validation .modal_buy-rules .rule {
+  color: #fff;
+  font-size: 14px;
+}
+.modal-buy .col-validation .modal_buy input {
+  width: 100%;
+}
+.modal-buy .col-validation .modal_buy input::placeholder {
+  color: #B5B5B5;
+  font-size: 14ox;
+}
+.modal-buy .col-validation .modal_buy-submit {
+  margin-top: 16px;
+  background-color: #E2231A;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+.modal-buy .col-validation .modal_buy-text {
+  color: #D9D9D9;
+  font-size: 14px;
+}
+.modal-buy .col-validation .modal_buy-text a {
+  font-weight: 600;
+  text-decoration: underline;
+  padding-right: 8px;
+}
+
+.modal-validate {
+  background-color: #212121;
+}
+.modal-validate .modal-dialog {
+  max-width: 900px;
+}
+.modal-validate .modal-dialog .modal-content {
+  background-color: #212121;
+}
+.modal-validate .modal-dialog .modal-content .modal-body {
+  padding: 0px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-img .validate-img {
+  min-height: 400px;
+  width: 100%;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-validation {
+  padding: 0px 40px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-validation .close {
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  padding: 3px 5px;
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  border: none;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-validation .close:hover {
+  opacity: 1;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .modal_validate-box-title {
+  width: 100%;
+  border: 1px solid #656565;
+  background-color: #151515;
+  padding: 20px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .modal_validate-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
 .c-shield {
   padding: 80px 0px;
   background-color: #000;
@@ -1864,7 +1994,7 @@ p {
 }
 
 .c-parallax {
-  background-image: url("../img/bannerMeio.png");
+  background-image: url("../img/banner_meio.png");
   min-height: 60vh;
   background-size: cover;
   display: flex;
@@ -2053,8 +2183,6 @@ p {
 }
 .c-bottom-footer .marca:last-child {
   margin-right: 0px;
-}
-
-/** PAGE PALMEIRAS **/
+} /** PAGE PALMEIRAS **/
 
 /*# sourceMappingURL=vasco97.min.css.map */

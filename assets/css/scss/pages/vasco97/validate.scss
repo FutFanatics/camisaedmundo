@@ -1,0 +1,54 @@
+.modal-validate{
+    background-color: #212121 ;
+    .modal-dialog {
+        max-width:900px;
+        .modal-content{
+            background-color: #212121 ;
+
+            .modal-body{
+                padding: 0px;
+
+                .col-img{
+                    .validate-img{
+                        min-height: 400px;
+                        width: 100%;
+                    }
+                }
+                .col-validation{
+                    padding: 0px 40px;
+
+                    .close{
+                        background-color: #fff;
+                        opacity: 1;
+                        border-radius: 100%;
+                        padding: 3px 5px;
+                        position: absolute;
+                        top: -10px;
+                        right: 5px;
+                        border: none;
+            
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+                .modal_validate{
+                    &-box-title{
+                        width: 100%;
+                        border: 1px solid #656565;
+                        background-color: #151515;
+                        padding: 20px;
+                    }
+                    &-title{
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        margin-bottom: 0 ;
+                    }
+                }
+            }
+        }
+    }
+
+}

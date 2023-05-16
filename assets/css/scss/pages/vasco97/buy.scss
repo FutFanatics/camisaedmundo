@@ -1,0 +1,93 @@
+.modal-buy{
+    background-color: #212121 ;
+    .modal-dialog {
+        max-width:900px;
+        .modal-content{
+            background-color: #212121 ;
+
+            .modal-body{
+                padding: 0px;
+            }
+        }
+    }
+    .col-img{
+        padding: 0px;
+
+        .buy-img{
+            width: 100%;
+        }
+    }
+    .col-validation{
+        padding: 60px 40px;
+
+        .close{
+            background-color: #fff;
+            opacity: 1;
+            border-radius: 100%;
+            padding: 3px 5px;
+            position: absolute;
+            top: -10px;
+            right: 5px;
+            border: none;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .modal_buy{
+            &-title{
+                font-size: 20px;
+                color: #FFF;
+                text-transform: uppercase;
+                font-weight: 600;
+                padding-bottom:8px;
+            }
+            &-rules{
+                border: solid 1px #656565;
+                padding: 30px;
+                background-color: #151515;
+                margin-bottom: 16px;
+
+                .rule{
+                    color:#fff ;
+                    font-size: 14px;
+                }
+            }
+            input{
+                width: 100%;
+                
+                &::placeholder{
+                    color: #B5B5B5;
+                    font-size: 14ox;
+                }
+            }
+            &-submit{
+                margin-top: 16px;
+                background-color: #E2231A;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 500;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                text-decoration: none;
+                cursor: pointer;
+                margin-bottom: 16px;
+            }
+
+            &-text{
+                color:#D9D9D9; 
+                font-size: 14px;
+                a{
+                    font-weight: 600;
+                    text-decoration: underline;
+                    padding-right: 8px;
+                }
+            }
+        }
+    }
+}

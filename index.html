@@ -25,7 +25,7 @@
 			crossorigin="anonymous"
 		/>
     
-    <title>Black Fut</title>
+    <title>Vasco Edmundo 97</title>
   </head>
   <body class="live__black">
     <!-- TOPO -->
@@ -50,7 +50,7 @@
               </div>
               <div class="box-buy">
                 <div class="amount"><span>quantidade</span><span class="number">- 1 +</span></div>
-                <a class="buy">Comprar</a>
+                <a class="buy" data-toggle="modal" data-target="#exampleModal">Comprar</a>
               </div>
             </div>
             <div class="col-md-7">
@@ -109,7 +109,7 @@
     </section>
     <section class="c-dimensions">
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center mb-4">
           <div class="col-12 col-md-6">
             <li class="dimension-text">Manga curta raglan com banda Sport e detalhes contrastantes em estampa sublimada;</li>
             <li class="dimension-text">Decote em V diferenciado com retilínea bicolor com recorte interno com aplicação do escudo do Vasco em transfer aplicado;</li>
@@ -396,6 +396,84 @@
           </div>
         </div>
       </section>
+      <!--modal-buy-->
+      <div class="modal-buy modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6 col-img">
+                  <img class="buy-img" src="assets/img/buy-img.png">
+                </div>
+                <div class="col-6 position-relative d-flex flex-column align-items-center justify-content-center col-validation">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                  <h1 class="modal_buy-title">Validação de cadastro</h1>
+                  <div class="modal_buy-rules">
+                    <li class="rule">A compra só poderá ser realizada via PIX ou cartão de crédito.</li>
+                    <li class="rule">Apenas sócio torcedores do Vasco que poderá realizar a compra.</li>
+                    <li class="rule">Apenas 1 compra por sócio torcedor</li>
+                  </div>
+                  <input type="text" placeholder="CPF">
+                  <a class="modal_buy-submit validate" data-toggle="modal" data-target="#modalValidate">validar</a>
+                  <p class="modal_buy-text d-flex"><a>Torne-se um sócio torcedor</a> e garanta o seu kit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--modal-validate-->
+      <div class="modal-validate modal fade" id="modalValidate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-4 col-img">
+                  <img class="validate-img" src="assets/img/buy-img.png">
+                </div>
+                <div class="col-8 position-relative d-flex flex-column align-items-center justify-content-center col-validation">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                  <div class="modal_validate-box-title"><h1 class="modal_validate-title">Valide seu Cadastro na nossa loja parceira</h1></div>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Nome Completo">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Data de nascimento">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="CPF">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Confirme sua senha">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Telefone">
+                      </div>
+                    </div>
+            
+                    </div>
+                  </form>
+                  <a class="modal_validate-submit validate" data-toggle="modal" data-target="#modalValidate">validar</a>
+                  <p class="modal_buy-text d-flex"><a>Torne-se um sócio torcedor</a> e garanta o seu kit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
