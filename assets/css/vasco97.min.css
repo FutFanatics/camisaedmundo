@@ -1840,9 +1840,6 @@ p {
   font-weight: 700;
 }
 
-.modal-buy {
-  background-color: #212121;
-}
 .modal-buy .modal-dialog {
   max-width: 900px;
 }
@@ -1924,11 +1921,8 @@ p {
   padding-right: 8px;
 }
 
-.modal-validate {
-  background-color: #212121;
-}
 .modal-validate .modal-dialog {
-  max-width: 900px;
+  max-width: 1000px;
 }
 .modal-validate .modal-dialog .modal-content {
   background-color: #212121;
@@ -1961,6 +1955,7 @@ p {
   border: 1px solid #656565;
   background-color: #151515;
   padding: 20px;
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 .modal-validate .modal-dialog .modal-content .modal-body .modal_validate-title {
@@ -1969,6 +1964,50 @@ p {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 0;
+  text-align: center;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .modal_validate-box_rules {
+  background-color: #151515;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .modal_validate-box_rules .rule {
+  color: #DBDBDB;
+  font-size: 14px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .modal_validate-submit {
+  background-color: #E2231A;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .describe-senha {
+  color: #DBDBDB;
+  font-size: 14px;
+  padding: 0px 12px;
+  text-align: justify;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .submit {
+  padding-left: 16px;
+  margin-bottom: 32px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .back-kit {
+  color: #D9D9D9;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
 }
 
 .c-shield {
@@ -1992,6 +2031,9 @@ p {
   font-size: 16px;
   font-weight: 300;
   padding-top: 8px;
+}
+.c-shield .shield-img {
+  width: 100%;
 }
 
 .c-parallax {

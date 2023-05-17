@@ -1,5 +1,8 @@
+@mixin md {
+    @media (min-width: 1200px) { @content; }
+}
+
 .modal-buy{
-    background-color: #212121 ;
     .modal-dialog {
         max-width:900px;
         .modal-content{
