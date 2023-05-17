@@ -1961,6 +1961,7 @@ p {
   border: 1px solid #656565;
   background-color: #151515;
   padding: 20px;
+  margin-bottom: 24px;
 }
 .modal-validate .modal-dialog .modal-content .modal-body .modal_validate-title {
   color: #fff;
