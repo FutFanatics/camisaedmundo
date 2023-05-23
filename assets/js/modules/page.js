@@ -68,11 +68,32 @@
 			}
 		}]
     });
-	
 		
+	$("#btn_validatebuy").on("click", function(){
+        var cpf = $("#inputbuy").val();
+
+        if(validarCPF(cpf)){
+
+			if (validarSocio(cpf)) {
+				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
+				myModal.show();
+			} else {
+				$('#inputbuy').addClass('error');
+				$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
+				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
+				myModal.show();
+			}
+        } else{
+            $('#inputbuy').addClass('error');
+			$('.error-msg').text("CPF Inválido!")
+        }
+
+    });
+
+	
 
 	function validarCPF(cpf) {
-			cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 
 		if (cpf.length !== 11) {
 			return false;
@@ -117,28 +138,20 @@
 			return false;
 		}
 		
-			return true;
+		return true;
 	}
 
-	$("#btn_validatebuy").on("click", function(){
-		var cpf = $("#inputbuy").val();
+	function validarSocio(cpf) {
+		jQuery.get("https://apiinfrahomologacao.futfanatics.app/partner/check/" + cpf + "?time=vasco", function( response ) {
+			var response = jQuery.parseJSON(response)
+			if(response.data.has_partner){
+				return true;
+			} else {
+				return false;
+			}
+		});
+	}
 
-		if(validarCPF(cpf)){
-			alert('cpf válido');
-		}
-		else{
-			alert('cpf inválido')
-		}
-
-	});
-	jQuery.get("https://apiinfrahomologacao.futfanatics.app/partner/check/42395970808?time=vasco", function( response ) {
-    var response = jQuery.parseJSON(response)
-    if(response.data.has_partner){
-        console.log("É Sócio")
-    } else {
-        console.log("Não é Sócio")
-    }
-});
 
 })(jQuery);
 

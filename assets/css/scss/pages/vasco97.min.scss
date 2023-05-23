@@ -11,8 +11,8 @@ $vitrine-gray: #747474;
 @import "../_lib/progressive.css";
 
 @import "../components/reset-tray";
+@import "../components/variables";
 
-@import "../fonts/icons-font";
 @import "../fonts/versus-medium";
 @import "../fonts/versus-regular";
 @import "../fonts/gotham-book";
@@ -20,8 +20,8 @@ $vitrine-gray: #747474;
 @import "../fonts/gotham-bold";
 @import "../fonts/gotham-black";
 @import "../fonts/sporty";
+
 @import "vasco97/home";
-@import "../components/variables";
 @import "vasco97/describe";
 @import "vasco97/informative";
 @import "vasco97/forms";
@@ -58,10 +58,6 @@ $fw-light: 300;
 $fw-medium: 500;
 
 $fw-black: 900;
-
-
-
-
 
 @mixin for-phone-only {
     @media (max-width: 767px) { @content; }

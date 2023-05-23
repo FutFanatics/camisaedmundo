@@ -57,9 +57,9 @@
                     font-size: 14px;
                 }
             }
+            
             input{
                 width: 100%;
-                
                 &::placeholder{
                     color: #B5B5B5;
                     font-size: 14ox;
@@ -93,4 +93,19 @@
             }
         }
     }
+}
+
+
+
+.form-control {
+    border: 2px solid #ccc;
+    &.error {
+        border-color: #E2231A !important;
+        color: #E2231A;
+    }
+}
+
+.error-msg {
+    margin-top: 10px;
+    color: #E2231A !important;
 }

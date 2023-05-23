@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icons-futfanatics';
-  src:  url('fonts/icons/icons-futfanatics.eot?roql07');
-  src:  url('fonts/icons/icons-futfanatics.eot?roql07#iefix') format('embedded-opentype'),
-    url('fonts/icons/icons-futfanatics.ttf?roql07') format('truetype'),
-    url('fonts/icons/icons-futfanatics.woff?roql07') format('woff'),
-    url('fonts/icons/icons-futfanatics.svg?roql07#icomoon') format('svg');
+  src:  url('../../fonts/icons/icons-futfanatics.eot');
+  src:  url('../../fonts/icons/icons-futfanatics.eot?roql07#iefix') format('embedded-opentype'),
+    url('../../fonts/icons/icons-futfanatics.ttf?roql07') format('truetype'),
+    url('../../fonts/icons/icons-futfanatics.woff?roql07') format('woff'),
+    url('../../fonts/icons/icons-futfanatics.svg?roql07#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
