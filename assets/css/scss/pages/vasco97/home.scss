@@ -110,4 +110,20 @@
             max-height: 512px;
         }
     }
+    .container-nav{
+        height: 60px;
+        position: absolute;
+        bottom: 0px;
+        background:linear-gradient(270deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 100.63%);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .nav-slick{
+            &__shirt{
+                
+            }
+        }
+    }
 }
