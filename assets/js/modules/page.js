@@ -90,6 +90,14 @@
 
     });
 
+
+	$(".box-sizes button").on('click', function(){
+		$this = $(this);
+		
+		$(".box-sizes button").removeClass('selected');
+		$this.addClass('selected');
+	});
+
 	
 
 	function validarCPF(cpf) {

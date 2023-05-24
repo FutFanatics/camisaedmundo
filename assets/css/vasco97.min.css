@@ -931,6 +931,22 @@ html .botao-lancamento {
       transform: rotate(125deg);
       right: -24px;
       background-color: #000; }
+  .c-home .box-sizes {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; }
+    .c-home .box-sizes button {
+      width: 46px;
+      height: 56px;
+      display: block;
+      border: none;
+      background: none;
+      background-image: url("../img/escudo-variant.svg");
+      color: #FFF;
+      font-weight: bold;
+      font-size: 20px; }
+      .c-home .box-sizes button.selected {
+        color: #00351B; }
   .c-home .box-buy {
     margin-top: 64px;
     max-width: 60%;
