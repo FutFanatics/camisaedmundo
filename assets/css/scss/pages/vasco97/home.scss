@@ -1,3 +1,8 @@
+@mixin md{
+    @media (min-width: 1200px) { @content; }
+}
+
+
 .c-top{
     background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/tira-topo.png');
     min-height: 10vh;
@@ -29,13 +34,26 @@
     align-items: center;
 
     .box-title{
-        margin-bottom: 48px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         .top-title-home{
             color: #fff;
-            font-family: "versus-medium";
-            font-size: 25px;
+            font-family: "versus";
+            font-size: 22px;
             letter-spacing: 5px;
             margin-bottom: 0;
+            padding-top: 32px;
+            font-weight: 300;
+
+            @include md{
+                font-size: 30px;
+                padding-top: 0px;
+                line-height: 1.5rem;
+            }
         }
         .title-home{
             font-family:"versus-medium";
@@ -43,8 +61,16 @@
             letter-spacing: 3px;
             color: #FFF;
         }
+        @include md{
+            display: block;
+            font-size: 70px;
+        }
     }
     .box-price{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         .price{
             color: #FFF;
             font-size: 16px;
@@ -75,11 +101,15 @@
                 background-color: #000;
             }
         }
+        @include md{
+            display: block;
+        }
     }
     .box-sizes {
         display: flex;
         gap: 20px;
         margin-top: 20px;
+        justify-content: center;
         button {
             width: 46px;
             height: 56px;
@@ -95,11 +125,16 @@
                 background-image: url('../img/escudo-variant-select.svg');
             }
         }
+        @include md{
+            justify-content: start;
+        }
     }
     .box-buy{
-        margin-top: 64px;
-        max-width: 60%;
+        margin-top: 42px;
+        max-width: 100%;
         padding: 0;
+        display: flex;
+        
         .amount{
             padding: 10px 20px;
             border: 1px solid #363636;
@@ -153,7 +188,18 @@
             font-family: 'versus-medium';
             font-size: 22px;
             text-decoration: none;
+            align-items: center;
             cursor: pointer;
+            width: 100%;
+
+            @include md{
+                padding: 10px 0px;
+            }
+        }
+        @include md{
+            display: block;
+            max-width: 60%;
+            margin-top: 64px;
         }
     }
     .slick__shirt{

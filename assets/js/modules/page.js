@@ -27,6 +27,7 @@
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1,
+				dots:true,
 			}
 		}]
     });
@@ -188,6 +189,28 @@
 			}
 		});
 	}
+	$('.see-more').on('click', function() {
+
+		if (!$(this).siblings('.informative-box').hasClass('active')) {
+			$(this).html('Mostrar menos -');
+			$(this).siblings('.informative-box').addClass('active');
+		} else { 
+			$(this).html('Mostrar mais +');
+			$(this).siblings('.informative-box').removeClass('active');
+		}
+		return false;
+	});
+	$('.see-more-shield').on('click', function() {
+
+		if (!$(this).siblings('.box-content-shield').hasClass('active')) {
+			$(this).html('Mostrar menos -');
+			$(this).siblings('.box-content-shield').addClass('active');
+		} else { 
+			$(this).html('Mostrar mais +');
+			$(this).siblings('.box-content-shield').removeClass('active');
+		}
+		return false;
+	});
 
 })(jQuery);
 

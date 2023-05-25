@@ -4,25 +4,32 @@
 
 .c-parallax{
     background-image: url("../img/banner_meio.png");
-    min-height: 60vh;
+    min-height: 45vh;
     background-size: cover;
     display: flex;
+    justify-content: center;
     align-items: center;
+    border: none;
+
+    @include md{
+        min-height: 60vh;
+    }
 
     .parallax-shield{
-        width: 80px;
+        width: 90px;
         height: auto;
+        margin-bottom: 8px;
 
         @include md{
             width: auto;
+            width: 80px;
         }
     }
 
     .parallax-title{
         color: #fff;
         margin-bottom: 0;
-        font-weight: 800;
-        font-size: 28px;
+        font-size: 45px;
         text-align: center;
         margin-top: 16px;
         font-family: 'versus-medium';
@@ -31,6 +38,7 @@
             padding-left: 64px;
             font-size: 60px;
             letter-spacing: 2px;
+            font-weight: 800;
             text-align: start;
             margin-top: 0px;
         }

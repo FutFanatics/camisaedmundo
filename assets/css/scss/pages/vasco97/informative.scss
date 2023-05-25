@@ -24,10 +24,10 @@ p{
 
         &-toptitle{
             text-transform: uppercase;
-            font-size: 25px;
+            font-size: 30px;
             font-family: 'versus';
-            font-weight: 400;
-            letter-spacing: 2px;
+            font-weight: 300;
+            letter-spacing: 5px;
             text-align: center;
 
             @include md{
@@ -41,9 +41,11 @@ p{
         }
         &-title{
             text-transform: uppercase;
-            font-size: 55px;
+            font-size: 120px;
             font-weight: 500;
-            line-height: 1.5rem;
+            text-transform: uppercase;
+            line-height: 4.8rem;
+            letter-spacing: 1px;
             font-family: 'versus';
             text-align: center;
 
@@ -66,22 +68,35 @@ p{
                 text-align: justify;
             }
         }
+        
+
         &-content{
             margin-bottom: 0px;
             padding-top: 8px;
             padding-bottom: 32px;
-            text-align: justify;
+            text-align: center;
+            font-size: 18px;
 
             @include md{
                 text-align: start;
                 padding-top: 16px;
                 font-weight: 300;
+                font-size: 16px;
             }
 
             &-title{
                 color: #FFA400;
                 font-weight: 700;
                 padding-bottom: 8px;
+                text-align: center;
+                font-size: 18px;
+                padding-top: 32px;
+
+                @include md{
+                    text-align: start;
+                    font-size: 16px;
+                    padding-top: 0px;
+                }
             }
 
             strong{
@@ -92,11 +107,12 @@ p{
     .box-target{
         display: flex;
         align-items: center;
-        margin-top: 32px;
+        margin-top: 16px;
         justify-content: center;
 
         @include md{
             justify-content: start;
+            margin-top: 32px;
         }
 
         .target{
@@ -117,6 +133,40 @@ p{
         max-width: 100%;
         @include md{
             min-height: 500px;
+        }
+    }
+    .informative-box{
+        max-height: 150px;
+        overflow: hidden;
+
+        @include md{
+            max-height: 800px;
+            overflow: auto;
+        }
+
+        &-active{
+            height: 1200px;
+        }
+    }
+    .see-more{
+        width: 100%;
+        border:#FFF 3px solid;
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        font-size: 16px;
+        padding: 8px 0px;
+        font-weight: 800;
+        bottom: 0;
+        text-transform: uppercase;
+        z-index: 99;
+        margin-top: 16px;
+        
+        &.active{
+
+        }
+        @include md{
+            display: none;
         }
     }
 }

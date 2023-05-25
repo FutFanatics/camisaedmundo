@@ -1082,20 +1082,45 @@ html .botao-lancamento:hover {
   align-items: center;
 }
 .c-home .box-title {
-  margin-bottom: 48px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .c-home .box-title .top-title-home {
   color: #fff;
-  font-family: "versus-medium";
-  font-size: 25px;
+  font-family: "versus";
+  font-size: 22px;
   letter-spacing: 5px;
   margin-bottom: 0;
+  padding-top: 32px;
+  font-weight: 300;
+}
+@media (min-width: 1200px) {
+  .c-home .box-title .top-title-home {
+    font-size: 30px;
+    padding-top: 0px;
+    line-height: 1.5rem;
+  }
 }
 .c-home .box-title .title-home {
   font-family: "versus-medium";
   font-size: 60px;
   letter-spacing: 3px;
   color: #FFF;
+}
+@media (min-width: 1200px) {
+  .c-home .box-title {
+    display: block;
+    font-size: 70px;
+  }
+}
+.c-home .box-price {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .c-home .box-price .price {
   color: #FFF;
@@ -1125,10 +1150,16 @@ html .botao-lancamento:hover {
   right: -24px;
   background-color: #000;
 }
+@media (min-width: 1200px) {
+  .c-home .box-price {
+    display: block;
+  }
+}
 .c-home .box-sizes {
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  justify-content: center;
 }
 .c-home .box-sizes button {
   width: 46px;
@@ -1145,10 +1176,16 @@ html .botao-lancamento:hover {
 .c-home .box-sizes button.selected {
   background-image: url("../img/escudo-variant-select.svg");
 }
+@media (min-width: 1200px) {
+  .c-home .box-sizes {
+    justify-content: start;
+  }
+}
 .c-home .box-buy {
-  margin-top: 64px;
-  max-width: 60%;
+  margin-top: 42px;
+  max-width: 100%;
   padding: 0;
+  display: flex;
 }
 .c-home .box-buy .amount {
   padding: 10px 20px;
@@ -1198,7 +1235,21 @@ html .botao-lancamento:hover {
   font-family: "versus-medium";
   font-size: 22px;
   text-decoration: none;
+  align-items: center;
   cursor: pointer;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .c-home .box-buy .buy {
+    padding: 10px 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .c-home .box-buy {
+    display: block;
+    max-width: 60%;
+    margin-top: 64px;
+  }
 }
 .c-home .slick__shirt .shirt {
   max-height: 420px;
@@ -1312,10 +1363,10 @@ p {
 }
 .c-informative .text-toptitle {
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 30px;
   font-family: "versus";
-  font-weight: 400;
-  letter-spacing: 2px;
+  font-weight: 300;
+  letter-spacing: 5px;
   text-align: center;
 }
 @media (min-width: 1200px) {
@@ -1330,9 +1381,11 @@ p {
 }
 .c-informative .text-title {
   text-transform: uppercase;
-  font-size: 55px;
+  font-size: 120px;
   font-weight: 500;
-  line-height: 1.5rem;
+  text-transform: uppercase;
+  line-height: 4.8rem;
+  letter-spacing: 1px;
   font-family: "versus";
   text-align: center;
 }
@@ -1361,19 +1414,31 @@ p {
   margin-bottom: 0px;
   padding-top: 8px;
   padding-bottom: 32px;
-  text-align: justify;
+  text-align: center;
+  font-size: 18px;
 }
 @media (min-width: 1200px) {
   .c-informative .text-content {
     text-align: start;
     padding-top: 16px;
     font-weight: 300;
+    font-size: 16px;
   }
 }
 .c-informative .text-content-title {
   color: #FFA400;
   font-weight: 700;
   padding-bottom: 8px;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 32px;
+}
+@media (min-width: 1200px) {
+  .c-informative .text-content-title {
+    text-align: start;
+    font-size: 16px;
+    padding-top: 0px;
+  }
 }
 .c-informative .text-content strong {
   font-weight: 700;
@@ -1381,12 +1446,13 @@ p {
 .c-informative .box-target {
   display: flex;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 16px;
   justify-content: center;
 }
 @media (min-width: 1200px) {
   .c-informative .box-target {
     justify-content: start;
+    margin-top: 32px;
   }
 }
 .c-informative .box-target .target {
@@ -1406,6 +1472,38 @@ p {
 @media (min-width: 1200px) {
   .c-informative .img-informative {
     min-height: 500px;
+  }
+}
+.c-informative .informative-box {
+  max-height: 150px;
+  overflow: hidden;
+}
+@media (min-width: 1200px) {
+  .c-informative .informative-box {
+    max-height: 800px;
+    overflow: auto;
+  }
+}
+.c-informative .informative-box-active {
+  height: 1200px;
+}
+.c-informative .see-more {
+  width: 100%;
+  border: #FFF 3px solid;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  font-size: 16px;
+  padding: 8px 0px;
+  font-weight: 800;
+  bottom: 0;
+  text-transform: uppercase;
+  z-index: 99;
+  margin-top: 16px;
+}
+@media (min-width: 1200px) {
+  .c-informative .see-more {
+    display: none;
   }
 }
 
@@ -1683,42 +1781,100 @@ p {
   font-family: "versus";
   text-transform: uppercase;
   color: #fff;
-  font-size: 70px;
+  font-size: 60px;
   letter-spacing: 3px;
-  line-height: 4rem;
+  line-height: 3.5rem;
   font-weight: 300;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-shield .shield-title {
+    font-size: 70px;
+    padding-top: 0px;
+    text-align: start;
+    padding-bottom: 0px;
+  }
 }
 .c-shield .shield-content {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
   padding-top: 8px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-shield .shield-content {
+    text-align: start;
+  }
 }
 .c-shield .shield-img {
   width: 100%;
 }
+.c-shield .box-content-shield {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .c-shield .box-content-shield {
+    max-height: 800px;
+    overflow: auto;
+  }
+}
+.c-shield .box-content-shield-active {
+  max-height: 1200px;
+}
+.c-shield .see-more-shield {
+  width: 100%;
+  border: #FFF 3px solid;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  font-size: 16px;
+  padding: 8px 0px;
+  font-weight: 800;
+  bottom: 0;
+  text-transform: uppercase;
+  z-index: 99;
+  margin-top: 16px;
+}
+@media (min-width: 1200px) {
+  .c-shield .see-more-shield {
+    display: none;
+  }
+}
 
 .c-parallax {
   background-image: url("../img/banner_meio.png");
-  min-height: 60vh;
+  min-height: 45vh;
   background-size: cover;
   display: flex;
+  justify-content: center;
   align-items: center;
+  border: none;
+}
+@media (min-width: 1200px) {
+  .c-parallax {
+    min-height: 60vh;
+  }
 }
 .c-parallax .parallax-shield {
-  width: 80px;
+  width: 90px;
   height: auto;
+  margin-bottom: 8px;
 }
 @media (min-width: 1200px) {
   .c-parallax .parallax-shield {
     width: auto;
+    width: 80px;
   }
 }
 .c-parallax .parallax-title {
   color: #fff;
   margin-bottom: 0;
-  font-weight: 800;
-  font-size: 28px;
+  font-size: 45px;
   text-align: center;
   margin-top: 16px;
   font-family: "versus-medium";
@@ -1728,6 +1884,7 @@ p {
     padding-left: 64px;
     font-size: 60px;
     letter-spacing: 2px;
+    font-weight: 800;
     text-align: start;
     margin-top: 0px;
   }

@@ -11,19 +11,71 @@
             font-family:'versus';
             text-transform: uppercase;
             color: #fff;
-            font-size: 70px;
+            font-size: 60px;
             letter-spacing:3px;
-            line-height: 4rem;
+            line-height: 3.5rem;
             font-weight: 300;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            text-align: center;
+
+            @include md{
+                font-size: 70px;
+                padding-top: 0px;
+                text-align: start;
+                padding-bottom: 0px;
+            }
         }
         &-content{
             color: #fff;
             font-size: 16px;
             font-weight: 300;
             padding-top: 8px;
+            text-align: center;
+
+            @include md{
+                text-align: start;
+            }
         }
         &-img{
             width: 100%;
         }
     }
+
+    .box-content-shield{
+        max-height: 100px;
+        overflow: hidden;
+        position: relative;
+
+        @include md{
+            max-height: 800px;
+            overflow: auto;
+        }
+
+        &-active{
+            max-height: 1200px;
+        }
+    }
+    .see-more-shield{
+        width: 100%;
+        border:#FFF 3px solid;
+        display: flex;
+        justify-content: center;
+        color: #FFF;
+        font-size: 16px;
+        padding: 8px 0px;
+        font-weight: 800;
+        bottom: 0;
+        text-transform: uppercase;
+        z-index: 99;
+        margin-top: 16px;
+        
+        &.active{
+
+        }
+        @include md{
+            display: none;
+        }
+    }
+
 }
