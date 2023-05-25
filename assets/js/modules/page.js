@@ -91,6 +91,14 @@
         }
 
     });
+
+	$(".box-sizes button").on('click', function(){
+		$this = $(this);
+		
+		$(".box-sizes button").removeClass('selected');
+		$this.addClass('selected');
+	});
+
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 

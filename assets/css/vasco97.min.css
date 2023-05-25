@@ -1079,6 +1079,7 @@ html .botao-lancamento:hover {
   min-height: 90vh;
   display: flex;
   padding: 0px 0px 60px 0px;
+<<<<<<< HEAD
   align-items: center;
 }
 .c-home .box-title {
@@ -1165,6 +1166,88 @@ html .botao-lancamento:hover {
   align-items: center;
   width: 100%;
 }
+=======
+  align-items: center; }
+  .c-home .box-title {
+    margin-bottom: 48px; }
+    .c-home .box-title .top-title-home {
+      color: #fff;
+      font-family: "versus-medium";
+      font-size: 25px;
+      letter-spacing: 5px;
+      margin-bottom: 0; }
+    .c-home .box-title .title-home {
+      font-family: "versus-medium";
+      font-size: 60px;
+      letter-spacing: 3px;
+      color: #FFF; }
+  .c-home .box-price .price {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400; }
+    .c-home .box-price .price-new {
+      font-weight: 700;
+      font-size: 30px;
+      padding-bottom: 16px; }
+  .c-home .box-price .target-price {
+    padding: 8px 40px 8px 30px;
+    color: #FFF;
+    background-color: #222222;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative; }
+    .c-home .box-price .target-price::before {
+      position: absolute;
+      width: 50px;
+      height: 25px;
+      content: "";
+      bottom: 1px;
+      transform: rotate(125deg);
+      right: -24px;
+      background-color: #000; }
+  .c-home .box-sizes {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; }
+    .c-home .box-sizes button {
+      width: 46px;
+      height: 56px;
+      display: block;
+      border: none;
+      background: none;
+      background-image: url("../img/escudo-variant.svg");
+      color: #FFF;
+      font-weight: bold;
+      font-size: 20px; }
+      .c-home .box-sizes button.selected {
+        color: #00351B; }
+  .c-home .box-buy {
+    margin-top: 64px;
+    max-width: 60%;
+    padding: 0; }
+    .c-home .box-buy .amount {
+      padding: 10px 20px;
+      border: 1px solid #363636;
+      display: flex;
+      justify-content: space-between; }
+      .c-home .box-buy .amount span {
+        color: #fff;
+        font-family: 'versus-medium';
+        letter-spacing: 2px; }
+    .c-home .box-buy .buy {
+      background-color: #fff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0px;
+      font-family: 'versus-medium';
+      font-size: 22px;
+      text-decoration: none;
+      cursor: pointer; }
+  .c-home .slick__shirt .shirt {
+    max-height: 512px; }
+
+>>>>>>> 0809f0f18b9290d5f431405cdbfa9de8f362fb63
 .c-describe {
   background-color: #000;
 }
