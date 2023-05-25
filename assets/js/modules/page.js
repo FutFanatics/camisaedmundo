@@ -104,6 +104,22 @@
 		$this.addClass('selected');
 	});
 
+	$(".box-buy .buy").on('click', function(){
+
+		$('.box-msg').text("")
+		$('.box-msg').removeClass("error")
+
+		if(!validarVariant()) {
+			
+			$('.box-msg').text("Escolha um tamanho para prosseguir com a compra!")
+			$('.box-msg').addClass("error")
+			return false;
+		}
+		var myModal = new bootstrap.Modal($("#modalBuy")[0]);
+		myModal.show();
+	});
+
+
 	// Contador
 	$('.counter button').on('click',function(){
 
@@ -129,6 +145,30 @@
 	$('.data_nascimento').mask('00/00/0000');
 	$('.cpf').mask('000.000.000-00', {reverse: true});
 	$('.phone_with_ddd').mask('(00) 00000-0000');
+
+	$('.see-more').on('click', function() {
+
+		if (!$(this).siblings('.informative-box').hasClass('active')) {
+			$(this).html('Mostrar menos -');
+			$(this).siblings('.informative-box').addClass('active');
+		} else { 
+			$(this).html('Mostrar mais +');
+			$(this).siblings('.informative-box').removeClass('active');
+		}
+		return false;
+	});
+
+	$('.see-more-shield').on('click', function() {
+
+		if (!$(this).siblings('.box-content-shield').hasClass('active')) {
+			$(this).html('Mostrar menos -');
+			$(this).siblings('.box-content-shield').addClass('active');
+		} else { 
+			$(this).html('Mostrar mais +');
+			$(this).siblings('.box-content-shield').removeClass('active');
+		}
+		return false;
+	});
 
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
@@ -189,28 +229,21 @@
 			}
 		});
 	}
-	$('.see-more').on('click', function() {
 
-		if (!$(this).siblings('.informative-box').hasClass('active')) {
-			$(this).html('Mostrar menos -');
-			$(this).siblings('.informative-box').addClass('active');
-		} else { 
-			$(this).html('Mostrar mais +');
-			$(this).siblings('.informative-box').removeClass('active');
-		}
-		return false;
-	});
-	$('.see-more-shield').on('click', function() {
+	function validarVariant(){
 
-		if (!$(this).siblings('.box-content-shield').hasClass('active')) {
-			$(this).html('Mostrar menos -');
-			$(this).siblings('.box-content-shield').addClass('active');
-		} else { 
-			$(this).html('Mostrar mais +');
-			$(this).siblings('.box-content-shield').removeClass('active');
-		}
-		return false;
-	});
+		var validate = false;
+
+		$('.box-sizes button').each(function(i, el){
+
+			if($(el).hasClass('selected')) {
+				validate = true;
+			}
+		});	
+
+		return validate;
+	}
+	
 
 })(jQuery);
 
