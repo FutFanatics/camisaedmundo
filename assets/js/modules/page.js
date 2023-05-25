@@ -91,9 +91,6 @@
         }
 
     });
-
-	
-
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 
@@ -154,6 +151,11 @@
 		});
 	}
 
+	$('.data_nascimento').mask('00/00/0000');
+	$('.cpf').mask('000.000.000-00', {reverse: true});
+	$('.phone_with_ddd').mask('(00) 00000-0000');
+
+	
 
 })(jQuery);
 

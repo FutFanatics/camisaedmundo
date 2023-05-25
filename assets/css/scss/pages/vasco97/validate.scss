@@ -39,6 +39,14 @@
                         padding: 20px;
                         margin-top: 24px;
                         margin-bottom: 24px;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+
+                        p{
+                            color: #DBDBDB;
+                            font-size: 14px;
+                        }
                     }
                     &-title{
                         color: #fff;
@@ -99,5 +107,18 @@
             }
         }
     }
-
+    .title-gender{
+        color: #B5B5B5;
+        font-weight: 300;
+        font-size: 16px;
+        padding-right: 12px;
+    }
+    .gender{
+        color: #B5B5B5;
+        margin: 0 8px;
+        cursor: pointer;
+    }
+    input{
+        
+    }
 }
