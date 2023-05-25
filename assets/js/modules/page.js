@@ -99,6 +99,26 @@
 		$this.addClass('selected');
 	});
 
+	// Contador
+	$('.counter button').on('click',function(){
+
+		var classe = $(this).attr('class');
+		var $input = $('.counter input')
+		var qntd = parseInt($input.val());
+
+		if (qntd > 0) {
+			if (classe == 'more') {
+				$input.val(qntd + 1);
+			}
+		}
+
+		if (qntd > 1) {
+			if (classe == 'less') {
+				$input.val(qntd - 1);
+			}
+		}
+	});
+
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 
