@@ -79,11 +79,15 @@
 			if (validarSocio(cpf)) {
 				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
 				myModal.show();
+
+				$('.inputForm2.cpf').val(cpf)
 			} else {
 				$('#inputbuy').addClass('error');
 				$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
 				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
 				myModal.show();
+
+				$('.inputForm2.cpf').val(cpf)
 			}
         } else{
             $('#inputbuy').addClass('error');
@@ -98,6 +102,32 @@
 		$(".box-sizes button").removeClass('selected');
 		$this.addClass('selected');
 	});
+
+	// Contador
+	$('.counter button').on('click',function(){
+
+		var classe = $(this).attr('class');
+		var $input = $('.counter input')
+		var qntd = parseInt($input.val());
+
+		if (qntd > 0) {
+			if (classe == 'more') {
+				$input.val(qntd + 1);
+			}
+		}
+
+		if (qntd > 1) {
+			if (classe == 'less') {
+				$input.val(qntd - 1);
+			}
+		}
+	});
+
+	$("#formValidate").validate();
+
+	$('.data_nascimento').mask('00/00/0000');
+	$('.cpf').mask('000.000.000-00', {reverse: true});
+	$('.phone_with_ddd').mask('(00) 00000-0000');
 
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
@@ -158,12 +188,6 @@
 			}
 		});
 	}
-
-	$('.data_nascimento').mask('00/00/0000');
-	$('.cpf').mask('000.000.000-00', {reverse: true});
-	$('.phone_with_ddd').mask('(00) 00000-0000');
-
-	
 
 })(jQuery);
 
