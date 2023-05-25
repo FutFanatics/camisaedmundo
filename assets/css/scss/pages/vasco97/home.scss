@@ -105,6 +105,7 @@
             border: 1px solid #363636;
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             span{
                 color: #fff;
@@ -140,14 +141,8 @@
                     span{
                         font-size: 30px;
                     }
-
                 }
-
             }
-
-            
-
-            
         }
         .buy{
             background-color:#fff;

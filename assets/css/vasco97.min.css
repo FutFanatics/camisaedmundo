@@ -956,7 +956,8 @@ html .botao-lancamento {
       padding: 10px 20px;
       border: 1px solid #363636;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      align-items: center; }
       .c-home .box-buy .amount span {
         color: #fff;
         font-family: 'versus-medium';
@@ -1352,6 +1353,8 @@ p {
   color: #B5B5B5;
   margin: 0 8px;
   cursor: pointer; }
+.modal-validate .form-control:disabled {
+  background: #b1b1b1; }
 
 .c-shield {
   padding: 80px 0px;
