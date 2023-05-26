@@ -3,6 +3,11 @@
 }
 
 .modal-buy{
+    padding: 40px 20px;
+
+    @include md{
+        padding: 0px;
+    }
     .modal-dialog {
         max-width:900px;
         .modal-content{
@@ -14,14 +19,38 @@
         }
     }
     .col-img{
-        padding: 0px;
+
+        @include md{
+            padding: 0px;
+        }
+        
+
+        .close{
+            background-color: #fff;
+            opacity: 1;
+            border-radius: 100%;
+            padding: 3px 5px;
+            position: absolute;
+            top: -10px;
+            right: 50%;
+            transform: translate(50%);
+            border: none;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
 
         .buy-img{
             width: 100%;
         }
     }
     .col-validation{
-        padding: 60px 40px;
+        padding: 60px 40px 30px 40px;
+
+        @include md{
+            padding: 60px 40px;
+        }
 
         .close{
             background-color: #fff;
@@ -85,10 +114,18 @@
             &-text{
                 color:#D9D9D9; 
                 font-size: 14px;
+                text-align: center;
+                flex-direction: column;
+
                 a{
                     font-weight: 600;
                     text-decoration: underline;
                     padding-right: 8px;
+                }
+
+                @include md{
+                    flex-direction: row;
+                    text-align: start;
                 }
             }
         }

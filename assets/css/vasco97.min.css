@@ -1536,7 +1536,12 @@ p {
 
 .c-form {
   background-color: #000;
-  padding: 60px 0px;
+  padding: 60px 20px;
+}
+@media (min-width: 1200px) {
+  .c-form {
+    padding: 60px 0px;
+  }
 }
 .c-form .container .col-register {
   background-color: #101010;
@@ -1547,8 +1552,20 @@ p {
 .c-form .container .col-register p {
   color: #FFFFFF;
   font-weight: 300;
-  padding: 90px;
-  font-size: 16px;
+  font-size: 18px;
+  padding: 32px;
+  font-family: "Gotham";
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .c-form .container .col-register p {
+    font-size: 16px;
+    text-align: start;
+    padding: 90px;
+  }
+}
+.c-form .container .col-register p strong {
+  font-weight: 700;
 }
 .c-form .container .col-shield {
   left: 33%;
@@ -1558,11 +1575,18 @@ p {
   height: 90px;
 }
 .c-form .container .col-send {
+  padding: 30px 0px 10px 0px;
   background-color: #3F3F3F;
-  height: 130px;
+  min-height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1200px) {
+  .c-form .container .col-send {
+    padding: 0px;
+    height: 130px;
+  }
 }
 .c-form .container .col-send .input-name, .c-form .container .col-send .input-email {
   border: 2px solid #FFFFFF;
@@ -1593,6 +1617,23 @@ p {
   font-weight: 700;
 }
 
+.buttons {
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  .buttons {
+    justify-content: start;
+  }
+}
+
+.modal-buy {
+  padding: 40px 20px;
+}
+@media (min-width: 1200px) {
+  .modal-buy {
+    padding: 0px;
+  }
+}
 .modal-buy .modal-dialog {
   max-width: 900px;
 }
@@ -1602,14 +1643,35 @@ p {
 .modal-buy .modal-dialog .modal-content .modal-body {
   padding: 0px;
 }
-.modal-buy .col-img {
-  padding: 0px;
+@media (min-width: 1200px) {
+  .modal-buy .col-img {
+    padding: 0px;
+  }
+}
+.modal-buy .col-img .close {
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  padding: 3px 5px;
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  transform: translate(50%);
+  border: none;
+}
+.modal-buy .col-img .close:hover {
+  opacity: 1;
 }
 .modal-buy .col-img .buy-img {
   width: 100%;
 }
 .modal-buy .col-validation {
-  padding: 60px 40px;
+  padding: 60px 40px 30px 40px;
+}
+@media (min-width: 1200px) {
+  .modal-buy .col-validation {
+    padding: 60px 40px;
+  }
 }
 .modal-buy .col-validation .close {
   background-color: #fff;
@@ -1667,11 +1729,19 @@ p {
 .modal-buy .col-validation .modal_buy-text {
   color: #D9D9D9;
   font-size: 14px;
+  text-align: center;
+  flex-direction: column;
 }
 .modal-buy .col-validation .modal_buy-text a {
   font-weight: 600;
   text-decoration: underline;
   padding-right: 8px;
+}
+@media (min-width: 1200px) {
+  .modal-buy .col-validation .modal_buy-text {
+    flex-direction: row;
+    text-align: start;
+  }
 }
 
 .form-control {
@@ -1687,6 +1757,14 @@ p {
   color: #E2231A !important;
 }
 
+.modal-validate {
+  padding: 40px 20px;
+}
+@media (min-width: 1200px) {
+  .modal-validate {
+    padding: 0px;
+  }
+}
 .modal-validate .modal-dialog {
   max-width: 1000px;
 }
@@ -1695,6 +1773,20 @@ p {
 }
 .modal-validate .modal-dialog .modal-content .modal-body {
   padding: 0px;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-img .close {
+  background-color: #fff;
+  opacity: 1;
+  border-radius: 100%;
+  padding: 3px 5px;
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  transform: translate(50%);
+  border: none;
+}
+.modal-validate .modal-dialog .modal-content .modal-body .col-img .close:hover {
+  opacity: 1;
 }
 .modal-validate .modal-dialog .modal-content .modal-body .col-img .validate-img {
   min-height: 400px;
@@ -1730,6 +1822,12 @@ p {
 .modal-validate .modal-dialog .modal-content .modal-body .modal_validate-box-title p {
   color: #DBDBDB;
   font-size: 14px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .modal-validate .modal-dialog .modal-content .modal-body .modal_validate-box-title p {
+    text-align: start;
+  }
 }
 .modal-validate .modal-dialog .modal-content .modal-body .modal_validate-title {
   color: #fff;
@@ -1918,10 +2016,15 @@ p {
 }
 
 .c-dimensions {
-  padding: 80px 0px;
+  padding: 40px 0px;
   background-color: #000;
   background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/fundo-dimensions.png");
   background-size: cover;
+}
+@media (min-width: 1200px) {
+  .c-dimensions {
+    padding: 80px 0px;
+  }
 }
 .c-dimensions .container {
   padding: 0px 24px;
@@ -1934,11 +2037,16 @@ p {
 .c-dimensions .dimension-title {
   text-transform: uppercase;
   color: #fff;
-  font-size: 30px;
+  font-size: 22px;
   font-family: "versus";
   margin-bottom: 24px;
   margin-top: 24px;
   letter-spacing: 5px;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .dimension-title {
+    font-size: 30px;
+  }
 }
 .c-dimensions .dimension-targets {
   margin-bottom: 16px;
@@ -1950,12 +2058,22 @@ p {
 .c-dimensions .dimension-targets .target {
   position: relative;
 }
+.c-dimensions .dimension-targets .target-one {
+  width: 160px;
+}
 .c-dimensions .dimension-targets .target-content {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   top: 2px;
+  padding-top: 2px;
+  font-size: 17px;
+}
+@media (min-width: 1200px) {
+  .c-dimensions .dimension-targets .target-content {
+    font-size: 16px;
+  }
 }
 .c-dimensions .dimension-text {
   font-size: 18px;

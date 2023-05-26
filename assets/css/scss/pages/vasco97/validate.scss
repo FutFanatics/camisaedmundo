@@ -1,4 +1,10 @@
 .modal-validate{
+    padding: 40px 20px;
+
+    @include md{
+        padding: 0px;
+    }
+
     .modal-dialog {
         max-width:1000px;
         .modal-content{
@@ -8,10 +14,27 @@
                 padding: 0px;
 
                 .col-img{
+                    .close{
+                        background-color: #fff;
+                        opacity: 1;
+                        border-radius: 100%;
+                        padding: 3px 5px;
+                        position: absolute;
+                        top: -10px;
+                        right: 50%;
+                        transform: translate(50%);
+                        border: none;
+            
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
                     .validate-img{
                         min-height: 400px;
                         width: 100%;
                     }
+
+                    
                 }
                 .col-validation{
                     padding: 0px 40px;
@@ -46,6 +69,11 @@
                         p{
                             color: #DBDBDB;
                             font-size: 14px;
+                            text-align: center;
+
+                            @include md{
+                                text-align: start;
+                            }
                         }
                     }
                     &-title{
