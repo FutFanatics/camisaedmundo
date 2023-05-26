@@ -1002,13 +1002,15 @@ html .botao-lancamento:hover {
 }
 
 @font-face {
-  font-family: "versus-medium";
-  src: url("fonts/versus/versusmedium.otf?v2"); /* IE9 Compat Modes */
+  font-family: "versus";
+  src: url("fonts/versus/versusmedium.otf?v14"); /* IE9 Compat Modes */
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Versus";
-  src: url("fonts/versus/versusregular.otf?v2"); /* IE9 Compat Modes */
+  font-family: "versus";
+  src: url("fonts/versus/versusregular.otf?v21234"); /* IE9 Compat Modes */
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -1105,7 +1107,7 @@ html .botao-lancamento:hover {
   }
 }
 .c-home .box-title .title-home {
-  font-family: "versus-medium";
+  font-family: "versus";
   font-size: 60px;
   letter-spacing: 3px;
   color: #FFF;
@@ -1196,7 +1198,7 @@ html .botao-lancamento:hover {
 }
 .c-home .box-buy .amount span {
   color: #fff;
-  font-family: "versus-medium";
+  font-family: "versus";
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #D9D9D9;
@@ -1210,7 +1212,7 @@ html .botao-lancamento:hover {
 .c-home .box-buy .amount .counter input {
   background: none;
   color: #fff;
-  font-family: "versus-medium";
+  font-family: "versus";
   border: none;
   width: 40px;
   text-align: center;
@@ -1219,7 +1221,7 @@ html .botao-lancamento:hover {
   border: none;
   background: none;
   color: #fff;
-  font-family: "versus-medium";
+  font-family: "versus";
   font-weight: 600;
   padding: 0px 15px;
 }
@@ -1232,7 +1234,7 @@ html .botao-lancamento:hover {
   display: flex;
   justify-content: center;
   padding: 10px 0px;
-  font-family: "versus-medium";
+  font-family: "versus";
   font-size: 22px;
   text-decoration: none;
   align-items: center;
@@ -1293,7 +1295,7 @@ html .botao-lancamento:hover {
   background-color: #000;
 }
 .c-describe .describe__slick .item {
-  padding-right: 32px;
+  padding-right: 31px;
 }
 .c-describe .describe__slick .describe-col {
   background-color: rgba(163, 163, 163, 0.2);
@@ -1326,7 +1328,7 @@ html .botao-lancamento:hover {
 }
 .c-describe .describe__slick .describe-col .title-describe {
   color: #FFF;
-  font-family: "versus-medium";
+  font-family: "versus";
   font-weight: 700;
   font-size: 25px;
   letter-spacing: 2px;
@@ -1337,6 +1339,31 @@ html .botao-lancamento:hover {
   color: #FFF;
   font-size: 16px;
   font-weight: 300;
+}
+.c-describe .slick-dots {
+  list-style: none;
+  padding: 10px 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-describe .slick-dots button {
+  font-size: 0;
+  background: #535353;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  border: 0;
+  margin: 0 5px;
+  opacity: 0.3;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.c-describe .slick-dots li.slick-active button {
+  opacity: 1;
+  width: 8px;
+  background: #D9D9D9;
 }
 
 p {
@@ -1877,7 +1904,7 @@ p {
   font-size: 45px;
   text-align: center;
   margin-top: 16px;
-  font-family: "versus-medium";
+  font-family: "versus";
 }
 @media (min-width: 1200px) {
   .c-parallax .parallax-title {
@@ -1908,7 +1935,7 @@ p {
   text-transform: uppercase;
   color: #fff;
   font-size: 30px;
-  font-family: "versus-medium";
+  font-family: "versus";
   margin-bottom: 24px;
   margin-top: 24px;
   letter-spacing: 5px;
