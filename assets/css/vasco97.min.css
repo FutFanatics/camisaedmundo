@@ -1064,6 +1064,9 @@ html .botao-lancamento:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 0;
+  position: relative;
+  z-index: 999999;
 }
 .c-top .title-top span {
   font-size: 14px;
@@ -1626,8 +1629,14 @@ p {
   }
 }
 
+.modal-open {
+  padding-right: 0px !important;
+}
+
 .modal-buy {
   padding: 40px 20px;
+  background-image: url("/assets/img/bg-modal.png");
+  background-size: cover;
 }
 @media (min-width: 1200px) {
   .modal-buy {
@@ -1759,6 +1768,7 @@ p {
 
 .modal-validate {
   padding: 40px 20px;
+  background-image: url("https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/fundo-dimensions.png");
 }
 @media (min-width: 1200px) {
   .modal-validate {

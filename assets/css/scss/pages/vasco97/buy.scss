@@ -1,9 +1,13 @@
 @mixin md {
     @media (min-width: 1200px) { @content; }
 }
-
+.modal-open{
+    padding-right: 0px !important;
+}
 .modal-buy{
     padding: 40px 20px;
+    background-image: url('/assets/img/bg-modal.png');
+    background-size: cover;
 
     @include md{
         padding: 0px;
