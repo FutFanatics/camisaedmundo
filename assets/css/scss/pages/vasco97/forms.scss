@@ -16,7 +16,7 @@
                 p{
                     color: #FFFFFF;
                     font-weight: 300;
-                    font-size: 18px;
+                    font-size: 16px;
                     padding: 32px;
                     font-family: 'Gotham';
                     text-align: center;
@@ -55,14 +55,30 @@
                     height: 130px;
                 }
 
+                .icon-vasco{
+                    height: 90px;
+                    width: 90px;
+                    position: relative;
+                    left: -35px;
+                }
+
+                .input-name{
+                    margin-bottom: 8px;
+
+                    @include md{
+                        margin-bottom: 0px;
+                    }
+                }
+
                 .input-name , .input-email{
                     border: 2px solid #FFFFFF;
                     color: #FFFFFF;
                     background-color: #3F3F3F;
-
+                    
                     &::placeholder{
                         color: #FFFFFF;
                     }
+                    
                 }
                 .aceite-label{
                     font-size: 14px;

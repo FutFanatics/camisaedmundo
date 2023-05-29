@@ -96,7 +96,7 @@
     </section>
     <section class="c-describe">
       <div class="container">
-          <div class="describe__slick">
+          <div class="describe__slick ">
             <div class="item">
               <div class="describe-col">
                 <h1 class="title-describe">
@@ -110,7 +110,7 @@
             <div class="item">
               <div class="describe-col">
                 <h1 class="title-describe">
-                  Informações técnicas
+                  marcas
                 </h1>
                 <p class="content-describe">
                   KOMBAT E KOMBAT PRO SYTEM® em termotransfer, identificando a autenticidade do produto Kappa® Gara, desenvolvidos para alinhar as especificidades dos atletas profissionais aliados ao design e elegância italianos;
@@ -129,6 +129,7 @@
               </div>
             </div>
           </div>
+          
       </div>
 
     </section>
@@ -344,13 +345,9 @@
           <div class="row align-items-center position-relative">
               <div class="col-12 col-md-5 col-register">
                   <p>Cadastre seu e-mail e seja o primeiro a<strong> receber novidades e ofertas do Vasco.</strong></p>
-              </div>
-              <div class="col-12 col-md-2 col-shield position-absolute">
-                <div class="d-flex justify-content-center time-title">
-                    <img class="icon-vasco w-100 d-none d-md-block" src="assets/img/shield.svg">
-                </div>
-            </div>
+              </div>  
               <div class="col-12 col-md-7 col-send">
+                <img class="icon-vasco d-none d-md-block" src="assets/img/shield.svg">
                   <form action="https://receiver.emkt.dinamize.com/in/301603/1/73cfd/0">
                       <input type="hidden" name="update_mode" value="AS"/>
                       <input type="hidden" name="form-code" value="{{ dadosForm.formCode }}"/>
@@ -372,7 +369,7 @@
                           </div>
                           <div class="form-group col-12 col-md-6">
                               <label class="d-flex align-items-center aceite-label">
-                                  <input type="checkbox" class="aceite-input" checked="checked"><span class="icon-checkbox"></span><span>Li e concordo com a <a href="{{ store.url }}/politica-de-privacidade" target="_blank">Política de Privacidade</a></span>
+                                  <input type="radio" class="aceite-input" required><span class="icon-checkbox"></span><span>Li e concordo com a <a href="{{ store.url }}/politica-de-privacidade" target="_blank">Política de Privacidade</a></span>
                               </label>
                           </div>
                           <div class="form-group col-12 col-md-6">

@@ -45,7 +45,11 @@
                 position: relative;
 
                 &-one{
-                    width:160px;
+                    width:135px;
+
+                    @include md{
+                        width:160px;
+                    }
                 }
 
                 &-content{
@@ -55,7 +59,7 @@
                     display: flex;
                     top: 2px;
                     padding-top: 2px;
-                    font-size: 17px;
+                    font-size: 15px;
 
                     @include md{
                         font-size: 16px;
@@ -65,10 +69,14 @@
         }
 
         &-text{
-            font-size: 18px;
+            font-size: 16px;
             color: #FFF;
             margin-top: 8px;
             font-family: 'gotham';
+
+            @include md{
+                font-size: 18px;
+            }
         }
 
         
@@ -101,6 +109,13 @@
         padding: 0px 30px;
         color: #fff;
         font-weight:500;
+        font-size: 14px;
+        text-align: center;
+
+        @include md{
+            text-align: start;
+            font-size: 16px;
+        }
     }
 
     .container-img{

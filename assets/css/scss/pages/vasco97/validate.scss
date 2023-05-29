@@ -1,6 +1,8 @@
 .modal-validate{
     padding: 40px 20px;
-    background-image: url('https://cdn.futfanatics.com.br/futfanatics-nacional/paginas-personalizadas/camisaedmundo/fundo-dimensions.png');
+    background-image: url('/assets/img/bg-modal.png');
+    background-size: cover;
+    overflow: hidden;
 
     @include md{
         padding: 0px;
@@ -31,8 +33,10 @@
                         }
                     }
                     .validate-img{
-                        min-height: 400px;
-                        width: 100%;
+                        height: 530px;
+                        width: 350px;
+                        object-fit: cover;
+                    
                     }
 
                     
@@ -109,6 +113,7 @@
                         font-size: 14px;
                         font-weight: 500;
                         text-decoration: none;
+                        border: none;
 
                         
                     }
@@ -146,6 +151,13 @@
         color: #B5B5B5;
         margin: 0 8px;
         cursor: pointer;
+
+        
+    }
+    #gender-error{
+        color: #E2231A;
+        font-weight: 700;
+        font-size: 12px;
     }
     .form-control:disabled {
         background: #b1b1b1;

@@ -9,9 +9,7 @@
     background-image: url('/assets/img/bg-modal.png');
     background-size: cover;
 
-    @include md{
-        padding: 0px;
-    }
+    
     .modal-dialog {
         max-width:900px;
         .modal-content{

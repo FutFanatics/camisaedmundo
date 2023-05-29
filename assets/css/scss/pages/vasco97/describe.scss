@@ -2,7 +2,7 @@
     background-color: #000;
     .describe__slick{
         .item{
-            padding-right: 31px;
+            padding-right: 20px;
         }
         .describe{
                 &-col{
@@ -10,7 +10,7 @@
                     border: 1px solid #6D6D6D;
                     padding: 40px;
                     position: relative;
-                    min-height: 320px;
+                    height: 350px;
 
                     &::before{
                         content: "";
@@ -40,7 +40,7 @@
                     .title-describe{
                         color:#FFF;
                         font-family: 'versus';
-                        font-weight: 700;
+                        font-weight: 400;
                         font-size: 25px;
                         letter-spacing: 2px;
                         text-transform: uppercase;
@@ -48,7 +48,7 @@
                     }
                     .content-describe{
                         color: #FFF;
-                        font-size: 16px;
+                        font-size: 15px;
                         font-weight: 300;
                     }
                 }
@@ -65,8 +65,8 @@
             button {
                 font-size: 0;
                 background: #535353 ;
-                width: 8px;
-                height: 8px;
+                width: 12px;
+                height: 12px;
                 border-radius: 100%;
                 border: 0;
                 margin: 0 5px;
@@ -78,9 +78,10 @@
             li.slick-active {
                 button {
                     opacity: 1;
-                    width: 8px;
+                    width: 12px;
                     background:#D9D9D9;
                 }
             }
         }
+
 }

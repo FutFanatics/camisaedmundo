@@ -136,16 +136,16 @@ p{
         }
     }
     .informative-box{
-        max-height: 150px;
+        max-height: 120px;
         overflow: hidden;
+
+        &.active{
+            max-height: 1200px;
+        }
 
         @include md{
             max-height: 800px;
             overflow: auto;
-        }
-
-        &-active{
-            height: 1200px;
         }
     }
     .see-more{
@@ -162,9 +162,7 @@ p{
         z-index: 99;
         margin-top: 16px;
         
-        &.active{
-
-        }
+        
         @include md{
             display: none;
         }

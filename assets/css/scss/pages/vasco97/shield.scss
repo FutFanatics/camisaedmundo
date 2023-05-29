@@ -46,15 +46,17 @@
         max-height: 100px;
         overflow: hidden;
         position: relative;
-
+        
+        & .active{
+            max-height: 1200px;
+        }
+        
         @include md{
             max-height: 800px;
             overflow: auto;
         }
 
-        &-active{
-            max-height: 1200px;
-        }
+        
     }
     .see-more-shield{
         width: 100%;
