@@ -81,14 +81,14 @@
 				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
 				myModal.show();
 
-				$('.inputForm2.cpf').val(cpf)
+				$('#formValidate .cpf').val(cpf)
 			} else {
 				$('#inputbuy').addClass('error');
 				$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
 				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
 				myModal.show();
 
-				$('.inputForm2.cpf').val(cpf)
+				$('#formValidate .cpf').val(cpf)
 			}
         } else{
             $('#inputbuy').addClass('error');
@@ -170,6 +170,106 @@
 		return false;
 	});
 
+	
+	/** Validação do 2º Formulário */
+	//$("#formValidate").validate();
+
+	const $fullname = $('#fullname');
+	const $phone = $('#phone');
+	const $birthdate = $('#birthdate');
+	const $email = $('#email');
+	const $cpf = $('.cpf');
+	const $password = $('#password');
+	const $password_confirm = $('#password_confirm');
+	
+	const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+	$cpf.mask('000.000.000-00', {reverse: true});
+	$birthdate.mask('00/00/0000');
+	$phone.mask('(00) 00000-0000');
+
+	$fullname.on('change', function (e) {
+		const value = e.target.value;
+
+		if(value.length <= 3 ) {
+			 displayError($(this), "Nome deve conter 3 caracteres");
+		} else {
+			displaySuccess($(this), "");
+		}
+	});
+
+	$phone.on('change', function (e) {
+		const value = e.target.value;
+
+		console.log(value);
+
+		if(value.length < 14 ) {
+			displayError($(this), "Número do celular inválido ");
+		} else {
+			displaySuccess($(this), "");
+		}
+	});
+
+	$password.on('change', function (e) {
+		const value = e.target.value;
+
+		console.log(value);
+
+		if(value.length < 6 ) {
+			displayError($(this), "Senha deve conter... ");
+		} else {
+			displaySuccess($(this), "");
+		}
+	});
+
+	$password_confirm.on('change', function (e) {
+		const value = $(this).val();
+		const valuePassword = $password.val();
+
+		console.log(value === valuePassword);
+
+		if(value === valuePassword ) {
+			displaySuccess($(this), "");
+		} else {
+			displayError($(this), "Senhas não são iguais");
+		}
+	});
+
+	$birthdate.on('change', function (e) {
+		const value = $(this).val();
+
+		if(validarData(value)) {
+			displaySuccess($(this), "");
+		} else {
+			displayError($(this), "Data não está no formato correto");
+		}
+		
+	});
+
+	$email.on('change', function (e) {
+		const value = e.target.value;
+
+		console.log(value);
+
+		if(emailValidation.test(value)) {
+			displaySuccess($(this), "");
+		} else {
+			displayError($(this), "O Email não está no formato correto. ");
+		}
+	});
+
+	function displayError($el, msg) {
+		$el.removeClass('success');
+		$el.addClass('error');
+		$el.siblings('.msg').addClass('error').text(msg);
+	}
+
+	function displaySuccess($el, msg){
+		$el.removeClass('error');
+		$el.addClass('success');
+		$el.siblings('.msg').text(msg);
+	}
+
 	function validarCPF(cpf) {
 		cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
 
@@ -243,6 +343,35 @@
 
 		return validate;
 	}
+
+	function validarData(data) {
+        // Ex: 10/01/1985
+        var regex = "\\d{2}/\\d{2}/\\d{4}";
+        var dtArray = data.split("/");
+
+        if (dtArray == null)
+            return false;
+
+        // Checks for dd/mm/yyyy format.
+        var dtDay= dtArray[0];
+        var dtMonth = dtArray[1];
+        var dtYear = dtArray[2];
+
+        if (dtMonth < 1 || dtMonth > 12)
+            return false;
+        else if (dtDay < 1 || dtDay> 31)
+            return false;
+        else if ((dtMonth==4 || dtMonth==6 || dtMonth==9 || dtMonth==11) && dtDay ==31)
+            return false;
+        else if (dtMonth == 2)
+        {
+            var isleap = (dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0));
+            if (dtDay> 29 || (dtDay ==29 && !isleap))
+                return false;
+        }
+        return true;
+    }
+    
 	
 
 })(jQuery);

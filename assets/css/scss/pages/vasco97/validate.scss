@@ -151,3 +151,27 @@
         background: #b1b1b1;
     }
 }
+
+
+
+    input.error {
+        border: 1px solid #e63636;
+        background-color: rgba(139, 0, 0, 0.127);
+    }
+    input.success {
+        border: 1px solid #258218;
+        background-color: rgba(23, 110, 44, 0.127);
+        color: #FFF;
+    }
+    .msg {
+        min-height: 22px;
+        padding-top: 2px;
+        display: block;
+        font-size: 12px;
+    }
+    .msg.error {
+        color: #e63636;
+    }
+    .form-group {
+        margin-bottom: 0;
+    }

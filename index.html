@@ -592,47 +592,44 @@
                 <form method="post" id="formValidate">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control" id="nome" placeholder="Nome Completo">
+                      <input type="text" class="form-control fullname" id="fullname" name="fullname" placeholder="Nome Completo">
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control phone_with_ddd" id="phone_with_ddd" placeholder="Telefone">
+                      <input type="text" class="form-control phone" id="phone" name="phone" placeholder="Celular">
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control data_nascimento" id="date" placeholder="Data de nascimento">
+                      <input type="text" class="form-control birthdate" id="birthdate" name="birthdate" placeholder="Data de nascimento">
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control" id="email" placeholder="Email">
+                      <input type="text" class="form-control email" id="email" name="email" placeholder="Email">
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control cpf inputForm2" id="cpf" disabled placeholder="CPF">
+                      <input type="text" class="form-control cpf" id="cpf" placeholder="CPF" disabled>
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="password" class="form-control" id="senha" placeholder="Senha">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                      <span class="msg"></span>
                     </div>
-                    <div class="form-group col-md-6 d-md-flex align-items-center d-none">
+                    <div class="form-group col-md-6 d-flex align-items-center">
                       <span class="title-gender">Sexo:</span>
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label gender" for="customControlValidation2">Masculino</label>
+                        <input type="radio" class="custom-control-input" id="gender_masc" name="gender" required>
+                        <label class="custom-control-label gender" for="gender_masc">Masculino</label>
                       </div>
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-                        <label class="custom-control-label gender" for="customControlValidation3">Feminino</label>
+                        <input type="radio" class="custom-control-input" id="gender_femi" name="gender" required>
+                        <label class="custom-control-label gender" for="gender_femi">Feminino</label>
                       </div>
+                      <span class="msg"></span>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="password" class="form-control" id="confirme_senha" placeholder="Confirme sua Senha">
-                    </div>
-                    <div class="form-group col-md-6 d-md-none align-items-center d-flex ">
-                      <span class="title-gender">Sexo:</span>
-                      <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
-                        <label class="custom-control-label gender" for="customControlValidation2">Masculino</label>
-                      </div>
-                      <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
-                        <label class="custom-control-label gender" for="customControlValidation3">Feminino</label>
-                      </div>
+                      <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirme sua Senha">
+                      <span class="msg"></span>
                     </div>
                     <div class="d-flex flex-md-row flex-column">
                       <div class="modal_validate-box_rules col-md-6">
@@ -640,7 +637,7 @@
                         <li class="rule">*Informe CPF cadastrado no programa Sócio Gigante.</li>
                       </div>
                       <div class="submit col-md-6">
-                        <a class="modal_validate-submit validate">enviar</a>
+                        <button type="submit" class="modal_validate-submit validate">enviar</button>
                         <a class="back-kit" href="">Voltar para o Login</a>
                       </div>
                     </div>
