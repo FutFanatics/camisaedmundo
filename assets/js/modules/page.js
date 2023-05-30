@@ -71,6 +71,30 @@
 			}
 		}]
     });
+
+	$('.buy').on('click', function(){
+		$('.c-top').css({
+			'position': 'fixed',
+			'width': '100%',
+			'padding': '20px',
+		});
+	});
+
+	setInterval(function(){
+		if(!$('.modal-buy').hasClass('show') ) {
+			$('.c-top').css({
+				'position': 'initial',
+				'width': '100%',
+				'padding': '0px',
+			});
+		} else {
+			$('.c-top').css({
+				'position': 'fixed',
+				'width': '100%',
+				'padding': '20px',
+			});
+		}
+	},500);
 		
 	$("#btn_validatebuy").on("click", function(){
         var cpf = $("#inputbuy").val();
@@ -82,7 +106,11 @@
 				if(response.data.has_partner){
 					var myModal = new bootstrap.Modal($("#modalValidate")[0]);
 					myModal.show();
+
 					$('#formValidate .cpf').val(cpf);
+					
+					
+					
 				} else {
 					$('#inputbuy').addClass('error');
 					$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
