@@ -77,19 +77,20 @@
 
         if(validarCPF(cpf)){
 
-			if (validarSocio(cpf)) {
-				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
-				myModal.show();
+			$.get("http://localhost/futfanatics/api-infra/partner/check/" + cpf + "?time=vasco", function( response ) {
 
-				$('#formValidate .cpf').val(cpf)
-			} else {
-				$('#inputbuy').addClass('error');
-				$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
-				var myModal = new bootstrap.Modal($("#modalValidate")[0]);
-				myModal.show();
+				if(response.data.has_partner){
+					var myModal = new bootstrap.Modal($("#modalValidate")[0]);
+					myModal.show();
+					$('#formValidate .cpf').val(cpf);
+				} else {
+					$('#inputbuy').addClass('error');
+					$('.error-msg').text("Esse CPF não é um Sócio Torcedor!");
+					var myModal = new bootstrap.Modal($("#modalValidate")[0]);
+					myModal.show();
+				}
+			});
 
-				$('#formValidate .cpf').val(cpf)
-			}
         } else{
             $('#inputbuy').addClass('error');
 			$('.error-msg').text("CPF Inválido!")
@@ -140,8 +141,6 @@
 		}
 	});
 
-	$("#formValidate").validate();
-
 	$('.data_nascimento').mask('00/00/0000');
 	$('.cpf').mask('000.000.000-00', {reverse: true});
 	$('.phone_with_ddd').mask('(00) 00000-0000');
@@ -170,7 +169,6 @@
 		return false;
 	});
 
-	
 	/** Validação do 2º Formulário */
 	//$("#formValidate").validate();
 
@@ -181,6 +179,8 @@
 	const $cpf = $('.cpf');
 	const $password = $('#password');
 	const $password_confirm = $('#password_confirm');
+
+	const $gender = $('[name="gender"]');
 	
 	const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
@@ -249,8 +249,6 @@
 	$email.on('change', function (e) {
 		const value = e.target.value;
 
-		console.log(value);
-
 		if(emailValidation.test(value)) {
 			displaySuccess($(this), "");
 		} else {
@@ -258,10 +256,83 @@
 		}
 	});
 
+	$('#formValidate').on('submit', function(e){
+		var breaked = false;
+		e.preventDefault();
+
+		$('.msg').each(function(){
+			
+			if(!validarSend()) {
+				displayErrorSend($('.msg-validate'), "Valide todos os campos para prosseguir");
+				breaked = true
+				return;
+			}
+		});
+
+		if(breaked) return false;
+
+		//var qntd = parseInt($('.counter input').val());
+		var qntd = 1;
+		var productId = "115556";
+		var variantId = "1800291";
+		var session_id = "djbpuji7sdn1l2fa36tgvauur3";
+		jQuery.ajax({
+			method: "POST",
+			url: "https://www.futfanatics.com.br/web_api/cart/",
+			contentType: "application/json; charset=utf-8",
+			data: '{"Cart":{"session_id":"'+session_id+'","product_id":"'+productId+'","quantity":"'+qntd+'","variant_id":"'+variantId+'"}}'
+		}).done(function( response, textStatus, jqXHRH ) {
+			console.log(response);
+
+			// causes: Array()
+			
+			if(response.code >= 200 && response.code < 300) {
+				const cart_url = response.cart_url;
+				//window.location = cart_url;
+
+				var data = {
+					fullName: $fullname.val(),
+					cpf: $cpf.val(),
+					password: $password.val(),
+					confirmPassword: $password_confirm.val(),
+					cellphone: $phone.val(),
+					birthdate: $birthdate.val(),
+					gender: $('[name="gender"]')[0].checked ? 'male' : 'female',
+					email: $email.val(),
+				}
+
+				var dataJson = JSON.stringify(data);
+
+				if(validarSend()) {
+					jQuery.ajax({
+						method: "POST",
+						url: "http://localhost/futfanatics/api-infra/partner/vasco/register",
+						contentType: "application/json; charset=utf-8",
+						data: dataJson
+					}).done(function( response, textStatus, jqXHRH ) {
+
+						window.location.href = 'https://www.futfanatics.com.br/loja/carrinho.php?loja=311840'
+
+					}).fail(function( jqXHR, status, errorThrown ){
+						var response = $.parseJSON(jqXHR.responseText);
+						console.log(response);
+					});
+				}
+			}
+		}).fail(function( jqXHR, status, errorThrown ){
+			var response = $.parseJSON(jqXHR.responseText);
+			console.log(response);
+		});
+	});
+
 	function displayError($el, msg) {
 		$el.removeClass('success');
 		$el.addClass('error');
 		$el.siblings('.msg').addClass('error').text(msg);
+	}
+
+	function displayErrorSend($el, msg) {
+		$el.addClass('error').text(msg);
 	}
 
 	function displaySuccess($el, msg){
@@ -319,17 +390,6 @@
 		return true;
 	}
 
-	function validarSocio(cpf) {
-		jQuery.get("https://apiinfrahomologacao.futfanatics.app/partner/check/" + cpf + "?time=vasco", function( response ) {
-			var response = jQuery.parseJSON(response)
-			if(response.data.has_partner){
-				return true;
-			} else {
-				return false;
-			}
-		});
-	}
-
 	function validarVariant(){
 
 		var validate = false;
@@ -371,7 +431,23 @@
         }
         return true;
     }
-    
+
+	function validarSend() {
+
+		if (
+			$fullname.val().length > 0 &&
+			$phone.val().length > 0 &&
+			$birthdate.val().length > 0 &&
+			$email.val().length > 0 &&
+			$cpf.val().length > 0 &&
+			$password.val().length > 0 &&
+			$password_confirm.val().length > 0 
+		) {
+			return true;
+		}
+		return false;
+	}
+
 	
 
 })(jQuery);

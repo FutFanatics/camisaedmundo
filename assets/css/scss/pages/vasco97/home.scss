@@ -203,7 +203,7 @@
         @include md{
             display: block;
             max-width: 60%;
-            margin-top: 64px;
+            margin-top: 20px;
         }
     }
     .slick__shirt{
@@ -251,7 +251,8 @@
         width: 100%;
     }
 
-    .box-msg{
+    .box-msg {
+        min-height: 40px;
         &.error{
             padding-top:16px ;
             color: #E2231A;

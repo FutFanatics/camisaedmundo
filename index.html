@@ -48,8 +48,8 @@
                 <h1 class="title-home">Edmundo 1997</h1>
               </div>
               <div class="box-price ">
-                <p class="price price-new">R$000,00</p>
-                <span class="target-price">Ou 5x de R$00,00 Sem Juros</span>
+                <p class="price price-new">R$999,90</p>
+                <span class="target-price">Ou 5x de R$199,98 Sem Juros</span>
               </div>
               <div class="box-sizes">
                 <button>P</button>
@@ -60,6 +60,7 @@
                 <span></span>
               </div>
               <div class="box-buy">
+                <!-- Habilitar quando liberar para todo mundo
                 <div class="amount">
                   <span>quantidade</span>
                   <div class="counter">
@@ -68,6 +69,7 @@
                     <button class="less"><span>-</span></button>
                   </div>
                 </div>
+                -->
                 <a class="buy" data-toggle="modal" data-target="#exampleModal">Comprar</a>
               </div>
             </div>
@@ -83,7 +85,7 @@
                   <img class="shirt" src="assets/img/vasco3.png">
                 </div>
               </div>
-              <div class="container-nav position-relative">
+              <div class="container-nav position-relative d-none">
                 <div class="nav-slick__shirt">
                   <button class="slick-prev slick-arrow" type="button"><i class="icon-arrow-left"></i></button>
                   <button class="slick-next slick-arrow" type="button"><i class="icon-arrow-right"></i></button>
@@ -615,11 +617,11 @@
                     <div class="form-group col-md-6 d-flex align-items-center">
                       <span class="title-gender">Sexo:</span>
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="gender_masc" name="gender" required>
+                        <input type="radio" class="custom-control-input" value="male" id="gender_masc" name="gender" required>
                         <label class="custom-control-label gender" for="gender_masc">Masculino</label>
                       </div>
                       <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="gender_femi" name="gender" required>
+                        <input type="radio" class="custom-control-input" value="female"  id="gender_femi" name="gender" required>
                         <label class="custom-control-label gender" for="gender_femi">Feminino</label>
                       </div>
                       <span class="msg"></span>
@@ -633,9 +635,23 @@
                         <li class="rule">*Todos os campos são obrigatórios;</li>
                         <li class="rule">*Informe CPF cadastrado no programa Sócio Gigante.</li>
                       </div>
+                      <style>
+                        .msg-validate {
+                            font-size: 13px;
+                            color: #FFF;
+                            margin-bottom: 10px;
+                            display: block;
+                            border-radius: 7px;
+                        }
+                        .msg-validate.error {
+                          padding: 4px;
+                          background-color: rgba(139, 0, 0, 0.5);
+                        }
+                      </style>
                       <div class="submit col-md-6">
+                        <span class="msg-validate"></span>
                         <button type="submit" class="modal_validate-submit validate">enviar</button>
-                        <a class="back-kit" href="">Voltar para o Login</a>
+                        <a class="back-kit" href="">Voltar</a>
                       </div>
                     </div>
                   </div>
