@@ -77,7 +77,7 @@
 
         if(validarCPF(cpf)){
 
-			$.get("http://localhost/futfanatics/api-infra/partner/check/" + cpf + "?time=vasco", function( response ) {
+			$.get("https://apiinfra.futfanatics.app/partner/check/" + cpf + "?time=vasco", function( response ) {
 
 				if(response.data.has_partner){
 					var myModal = new bootstrap.Modal($("#modalValidate")[0]);
@@ -306,7 +306,7 @@
 				if(validarSend()) {
 					jQuery.ajax({
 						method: "POST",
-						url: "http://localhost/futfanatics/api-infra/partner/vasco/register",
+						url: "https://apiinfra.futfanatics.app/partner/vasco/register",
 						contentType: "application/json; charset=utf-8",
 						data: dataJson
 					}).done(function( response, textStatus, jqXHRH ) {
