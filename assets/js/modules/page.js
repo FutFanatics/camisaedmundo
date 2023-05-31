@@ -200,24 +200,24 @@
 	/** Validação do 2º Formulário */
 	//$("#formValidate").validate();
 
-	const $fullname = $('#fullname');
-	const $phone = $('#phone');
-	const $birthdate = $('#birthdate');
-	const $email = $('#email');
-	const $cpf = $('.cpf');
-	const $password = $('#password');
-	const $password_confirm = $('#password_confirm');
+	var $fullname = $('#fullname');
+	var $phone = $('#phone');
+	var $birthdate = $('#birthdate');
+	var $email = $('#email');
+	var $cpf = $('.cpf');
+	var $password = $('#password');
+	var $password_confirm = $('#password_confirm');
 
-	const $gender = $('[name="gender"]');
+	var $gender = $('[name="gender"]');
 	
-	const emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+	var emailValidation = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 	$cpf.mask('000.000.000-00', {reverse: true});
 	$birthdate.mask('00/00/0000');
 	$phone.mask('(00) 00000-0000');
 
 	$fullname.on('change', function (e) {
-		const value = e.target.value;
+		var value = e.target.value;
 
 		if(value.length <= 3 ) {
 			 displayError($(this), "Nome deve conter 3 caracteres");
@@ -227,7 +227,7 @@
 	});
 
 	$phone.on('change', function (e) {
-		const value = e.target.value;
+		var value = e.target.value;
 
 		console.log(value);
 
@@ -239,7 +239,7 @@
 	});
 
 	$password.on('change', function (e) {
-		const value = e.target.value;
+		var value = e.target.value;
 
 		console.log(value);
 
@@ -251,8 +251,8 @@
 	});
 
 	$password_confirm.on('change', function (e) {
-		const value = $(this).val();
-		const valuePassword = $password.val();
+		var value = $(this).val();
+		var valuePassword = $password.val();
 
 		console.log(value === valuePassword);
 
@@ -264,7 +264,7 @@
 	});
 
 	$birthdate.on('change', function (e) {
-		const value = $(this).val();
+		var value = $(this).val();
 
 		if(validarData(value)) {
 			displaySuccess($(this), "");
@@ -275,7 +275,7 @@
 	});
 
 	$email.on('change', function (e) {
-		const value = e.target.value;
+		var value = e.target.value;
 
 		if(emailValidation.test(value)) {
 			displaySuccess($(this), "");
@@ -315,7 +315,7 @@
 			// causes: Array()
 			
 			if(response.code >= 200 && response.code < 300) {
-				const cart_url = response.cart_url;
+				var cart_url = response.cart_url;
 				//window.location = cart_url;
 
 				var data = {
